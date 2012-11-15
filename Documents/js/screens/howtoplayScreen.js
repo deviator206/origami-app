@@ -29,7 +29,7 @@ HowToPlayScreen.prototype.setUp = function()
             sContent += '</ol>';
                
             sContent += '<p class="howToPlayPara">';
-            	sContent += 'Besides playing the game you can also learn the traditional art of origami and make special shapes<br />';
+            	sContent += 'Besides playing the game you can also learn the traditional art of origami and make special shapes';
                 sContent += 'for your family and friends.';
             sContent += '</p>';  
             sContent += '<p class="howToPlayPara">';

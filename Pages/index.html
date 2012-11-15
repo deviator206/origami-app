@@ -24,7 +24,7 @@
 						break;
 					case "img":
 						//console.log(' STR ' + str);
-						str = str.replace("img/", "");
+						str = str.replace("img/origami/", "");
 						sTemp += "" + imagesPath
 						break;
 				}
@@ -32,7 +32,8 @@
 				return sTemp;
 			}
 
-			var arrScriptTags = new Array('css/style.css', 'js/lib/PxLoader.js', 'js/lib/PxLoaderImage.js', 'js/model.js', 'js/screens/loadingScreen.js', 'js/screens/splashScreen.js', 'js/screens/howtoplayScreen.js', 'js/screens/gameplayScreen.js', 'js/screens/levelEndScreen.js', 'js/screens/winnerScreen.js', 'js/application.js');
+			//var arrScriptTags = new Array('css/style.css', 'js/lib/PxLoader.js', 'js/lib/PxLoaderImage.js', 'js/model.js', 'js/screens/loadingScreen.js', 'js/screens/splashScreen.js', 'js/screens/howtoplayScreen.js', 'js/screens/gameplayScreen.js', 'js/screens/levelEndScreen.js', 'js/screens/winnerScreen.js', 'js/application.js');
+			var arrScriptTags = new Array('css/style.css', 'js/app.js');
 			var arrScriptIndex = 0;
 			var arrDivNames = new Array('loading_script_tags', 'loadingScreen', 'splashScreen', 'howtoplayScreen', 'questionScreen', 'sidePanel', 'levelEndScreen', 'winnerScreen', 'overlayScreen')
 			function makeAllInvisible() {
@@ -160,16 +161,9 @@
 				</div>
 				<div id="sidePanel"></div>
 				<div id="overlayScreen" class="overlayScreenCSS">
-
-					<!--<div id="opaqueScreen" class="opaqueScreenCSS"></div>
-					<div id="origamiholder" class="hummingBirdHolder">
-						
-
-					</div>
-					<div id="origamiImageCloseButton" class="hummingCloseButton">
-						CLOSE
-					</div>-->
-				</div>
+				<div id="opaqueScreen" class="opaqueScreenCSS">-1</div>
+				<div class="closeOverlay" onClick="javascript:closeOverlay();"></div>
+			</div>
 			</div>
 
 		</div>
