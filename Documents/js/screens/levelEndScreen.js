@@ -68,7 +68,7 @@ LevelEndScreen.prototype.setUp = function()
             sContentHTML += '<div  id="start_next_level" class="nextButton">Next Level</div>';
             sContentHTML += '<div class="nxtLink">	';
             	sContentHTML += '<br/ ><br/ ><br/ ><br/ >';
-            	sContentHTML += '<a href="javascript:void(0);" id ="linkToHB" >Master the Humming Bird origami here!</a>';
+            	sContentHTML += '<a href="javascript:showOverlay();" id ="linkToHB" >Master the Humming Bird origami here!</a>';
             sContentHTML += '</div>';
             sContentHTML += '</div>';
             	
@@ -102,3 +102,26 @@ LevelEndScreen.prototype.setUp = function()
 		//document.getElementById('overlayScreen').style.display = "none"
 	//}
 }
+
+
+
+
+function closeOverlay()
+	{
+		document.getElementById('overlayScreen').style.display ="none";
+		document.getElementById('opaqueScreen').style.display ="none";
+	}
+	function showOverlay()
+	{
+		console.log("SHOW "+document.getElementById('opaqueScreen').innerHTML)
+		if(document.getElementById('opaqueScreen').innerHTML == '-1')
+		{
+			var sT = getAssetPath("img","images/close-image.png");
+			var sContent = '<img src="'+sT+'" height="100%" />'
+			console.log(" sContent :: "+ sContent);
+			document.getElementById('opaqueScreen').innerHTML = sContent;
+		}
+		
+		document.getElementById('overlayScreen').style.display ="block";
+		document.getElementById('opaqueScreen').style.display ="block";
+	}
