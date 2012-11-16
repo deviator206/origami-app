@@ -32,10 +32,10 @@
 				return sTemp;
 			}
 
-			//var arrScriptTags = new Array('css/style.css', 'js/lib/PxLoader.js', 'js/lib/PxLoaderImage.js', 'js/model.js', 'js/screens/loadingScreen.js', 'js/screens/splashScreen.js', 'js/screens/howtoplayScreen.js', 'js/screens/gameplayScreen.js', 'js/screens/levelEndScreen.js', 'js/screens/winnerScreen.js', 'js/application.js');
-			var arrScriptTags = new Array('css/style.css', 'js/app.js');
+			var arrScriptTags = new Array('css/style.css', 'js/lib/PxLoader.js', 'js/lib/PxLoaderImage.js', 'js/model.js', 'js/screens/loadingScreen.js', 'js/screens/splashScreen.js', 'js/screens/howtoplayScreen.js', 'js/screens/gameplayScreen.js', 'js/screens/levelEndScreen.js', 'js/screens/winnerScreen.js', 'js/application.js');
+			//var arrScriptTags = new Array('css/style.css', 'js/app.js');
 			var arrScriptIndex = 0;
-			var arrDivNames = new Array('loading_script_tags', 'loadingScreen', 'splashScreen', 'howtoplayScreen', 'questionScreen', 'sidePanel', 'levelEndScreen', 'winnerScreen', 'overlayScreen')
+			var arrDivNames = new Array('loading_script_tags', 'loadingScreen', 'splashScreen', 'howtoplayScreen', 'questionScreen', 'sidePanel', 'levelEndScreen', 'winnerScreen', 'overlayScreen','overlayScreen_ForQuestion')
 			function makeAllInvisible() {
 				for (var i = 0; i < arrDivNames.length; i++)
 					document.getElementById(arrDivNames[i]).style.display = 'none'
@@ -161,9 +161,13 @@
 				</div>
 				<div id="sidePanel"></div>
 				<div id="overlayScreen" class="overlayScreenCSS">
-				<div id="opaqueScreen" class="opaqueScreenCSS">-1</div>
-				<div class="closeOverlay" onClick="javascript:closeOverlay();"></div>
-			</div>
+					<div id="opaqueScreen" class="opaqueScreenCSS">-1</div>
+					<div class="closeOverlay" onClick="javascript:closeOverlay();"></div>
+				</div>
+				<div id="overlayScreen_ForQuestion" class="overlayScreenCSS_ForQuestion">
+					<div id="opaqueScreen_ForQuestion" class="opaqueScreenCSS_ForQuestion">-1</div>
+					<div class="closeOverlay_ForQuestion" onClick="javascript:closeQuestionOverlay();">TRY AGAIN</div>
+				</div>
 			</div>
 
 		</div>

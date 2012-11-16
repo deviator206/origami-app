@@ -127,3 +127,29 @@ GamePlayScreen.prototype.sidePanel = function ()
 	document.getElementById('sidePanel').innerHTML =sHTMLContent;
 	document.getElementById('sidePanel').className = 'rgtMenu'
 }
+
+
+
+
+
+function closeQuestionOverlay()
+	{
+		document.getElementById('overlayScreen_ForQuestion').style.display ="none";
+		document.getElementById('opaqueScreen_ForQuestion').style.display ="none";
+		DOMWrapper.nextTransition();
+	}
+	function showQuestionOverlay()
+	{
+		console.log("SHOW "+document.getElementById('opaqueScreen_ForQuestion').innerHTML)
+		if(document.getElementById('opaqueScreen_ForQuestion').innerHTML == '-1')
+		{
+			//var sT = getAssetPath("img","images/close-image.png");
+			var sContent = 'TRY AGAIN SAME QUESTION'
+			console.log(" sContent :: "+ sContent);
+			document.getElementById('opaqueScreen_ForQuestion').innerHTML = sContent;
+		}
+		
+		document.getElementById('overlayScreen_ForQuestion').style.display ="block";
+		document.getElementById('opaqueScreen_ForQuestion').style.display ="block";
+	}
+	

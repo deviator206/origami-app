@@ -31,7 +31,6 @@ body {
 	margin-left: 140px;
 	margin-top: 16px;
 	z-index: 100;
-	
 }
 
 .rgtMenu {
@@ -354,9 +353,8 @@ body {
 	margin-top: 17px;
 }
 
-
 /*---------- OVERLAY SCREEN ----------- */
-.overlayScreenCSS{
+.overlayScreenCSS {
 	top: 0;
 	left: 0;
 	height: 627px;
@@ -367,7 +365,7 @@ body {
 	position: absolute;
 	z-index: 10;
 }
-.opaqueScreenCSS{
+.opaqueScreenCSS {
 	width: 100%;
 	height: 100%;
 	position: absolute;
@@ -376,7 +374,7 @@ body {
 	display: none;
 }
 
-.closeOverlay{
+.closeOverlay {
 	/*border: #0C3 solid 1px;*/
 	bottom: 0;
 	position: absolute;
@@ -384,6 +382,38 @@ body {
 	height: 31px;
 	width: 75px;
 	z-index: 10;
-	cursor:pointer;
+	cursor: pointer;
 }
 
+.overlayScreenCSS_ForQuestion {
+	top: 0;
+	left: 0;
+	height: 627px;
+	width: 900px;
+	background-color: black;
+	/*opacity: 0.8;*/
+	display: none;
+	position: absolute;
+	z-index: 10;
+	color: white;
+	font-size: 34px;
+	font-weight: bold;
+}
+.opaqueScreenCSS_ForQuestion {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 182px;
+	left: 92px;
+	display: none;
+}
+
+.closeOverlay_ForQuestion {
+	bottom: 0;
+	position: absolute;
+	right: 109px;
+	height: 172px;
+	width: 195px;
+	z-index: 10;
+	cursor: pointer;
+}
