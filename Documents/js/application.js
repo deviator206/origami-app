@@ -68,7 +68,7 @@ ApplicationWrapper.prototype.startTheGamePlay = function() {
 
 	} else {
 		// next level to be shown
-		console.log(' : : ' + this.nLevelCounter + " :v/s:" + this.arrLevelTotalQuestion.length);
+		//console.log(' : : ' + this.nLevelCounter + " :v/s:" + this.arrLevelTotalQuestion.length);
 
 		if (this.nLevelCounter <= this.arrLevelTotalQuestion.length - 2) {
 
@@ -123,12 +123,14 @@ ApplicationWrapper.prototype.answerSelected = function(nSelected) {
 	if (nSelected == objContent[this.nQuestionIndex].correct_answer) {
 		this.nQuizScore = this.nQuizScore + this.nCorrectAnswer
 		this.nGameState = 100;
-
+		this.nextTransition();
 	} else {
-		this.nGameState = 100;
+		this.nGameState = 70;
+		this.mCurrentScreen.showQuestionOverlay();
+		
 	}
 
-	this.nextTransition();
+	
 
 }
 ApplicationWrapper.prototype.showSelectedScreen = function(sDivName) {
@@ -150,6 +152,9 @@ ApplicationWrapper.prototype.setUp = function(config) {
 	this.mScreenManager = config.screenNames;
 
 }
+
+
+var DOMWrapper = null;
 function ApplicationWrapper() {
 	// track game state
 	this.nGameState = 0;
@@ -172,6 +177,7 @@ function ApplicationWrapper() {
 	this.nBenchmarkScore = 100;
 	this.bcarouselCreated = false;
 	this.arrQuestion = null;
+	DOMWrapper = this;
 	return this;
 }
 

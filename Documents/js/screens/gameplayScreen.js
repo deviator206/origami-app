@@ -104,7 +104,7 @@ GamePlayScreen.prototype.sidePanel = function ()
 			sHTMLContent += '<span> ' +arrPercent[this.mApplication.nQuestionIndex]+ '%</span><br>';
 			for(var i=1;i<5;i++)
 			{
-				console.log
+				//console.log
 				if(i < this.mApplication.nLevelCounter)
 				{
 					sA = getAssetPath("img","sidepanel_images/level_"+i+"_image5.png");
@@ -112,12 +112,12 @@ GamePlayScreen.prototype.sidePanel = function ()
 				}
 				else if(i ==  this.mApplication.nLevelCounter)
 				{
-					//sA = getAssetPath("img","sidepanel_images/level_"+i+"_image"+this.mApplication.nQuestionIndex+ ".png");
-					sA = getAssetPath("img","sidepanel_images/level_1_image"+this.mApplication.nQuestionIndex+ ".png");
+					sA = getAssetPath("img","sidepanel_images/level_"+i+"_image"+this.mApplication.nQuestionIndex+ ".png");
+					//sA = getAssetPath("img","sidepanel_images/level_1_image"+this.mApplication.nQuestionIndex+ ".png");
 				}
 				else
 				{
-					sA = getAssetPath("img","sidepanel_images/level_1_image1.png");
+					sA = getAssetPath("img","sidepanel_images/level_"+i+"_image1.png");
 				}
 				
 				sHTMLContent += '<img src="'+sA+'" /><br>';	
@@ -127,3 +127,31 @@ GamePlayScreen.prototype.sidePanel = function ()
 	document.getElementById('sidePanel').innerHTML =sHTMLContent;
 	document.getElementById('sidePanel').className = 'rgtMenu'
 }
+
+
+
+
+
+
+function closeQuestionOverlay()
+	{
+		document.getElementById('overlayScreen_ForQuestion').style.display ="none";
+		document.getElementById('opaqueScreen_ForQuestion').style.display ="none";
+		DOMWrapper.nextTransition();
+	}
+GamePlayScreen.prototype.showQuestionOverlay = function()
+	{
+		//console.log("SHOW "+document.getElementById('opaqueScreen_ForQuestion').innerHTML)
+		if(document.getElementById('opaqueScreen_ForQuestion').innerHTML == '-1')
+		{
+			//var sT = getAssetPath("img","images/close-image.png");
+			var sContent = 'TRY AGAIN SAME QUESTION'
+			//console.log(" sContent :: "+ sContent);
+			document.getElementById('opaqueScreen_ForQuestion').innerHTML = sContent;
+		}
+		
+		document.getElementById('overlayScreen_ForQuestion').style.display ="block";
+		document.getElementById('opaqueScreen_ForQuestion').style.display ="block";
+	}
+	
+

@@ -22,7 +22,7 @@ LevelEndScreen.prototype.sidePanel = function ()
 			sHTMLContent += '<span> 100%</span><br>';
 			for(var i=1;i<5;i++)
 			{
-				console.log
+				//console.log
 				if(i < this.mApplication.nLevelCounter)
 				{
 					sA = getAssetPath("img","sidepanel_images/level_"+i+"_image5.png");
@@ -30,12 +30,12 @@ LevelEndScreen.prototype.sidePanel = function ()
 				}
 				else if(i ==  this.mApplication.nLevelCounter)
 				{
-					//sA = getAssetPath("img","sidepanel_images/level_"+i+"_image"+this.mApplication.nQuestionIndex+ ".png");
-					sA = getAssetPath("img","sidepanel_images/level_1_image5.png");
+					sA = getAssetPath("img","sidepanel_images/level_"+i+"_image5.png");
+					//sA = getAssetPath("img","sidepanel_images/level_1_image5.png");
 				}
 				else
 				{
-					sA = getAssetPath("img","sidepanel_images/level_1_image1.png");
+					sA = getAssetPath("img","sidepanel_images/level_"+i+"_image1.png");
 				}
 				
 				sHTMLContent += '<img src="'+sA+'" /><br>';	
@@ -73,7 +73,7 @@ LevelEndScreen.prototype.setUp = function()
             sContentHTML += '</div>';
             	
          document.getElementById(this.mDivName).innerHTML =sContentHTML;
-         var sT = getAssetPath("img","levelend_images/Level_1.png");
+         var sT = getAssetPath("img","levelend_images/Level_"+this.mApplication.nLevelCounter+".png");
          document.getElementById('peacockContainer1').style.backgroundImage = 'url('+sT+ ')'
     
     document.getElementById('start_next_level').onclick= function()
@@ -113,12 +113,12 @@ function closeOverlay()
 	}
 	function showOverlay()
 	{
-		console.log("SHOW "+document.getElementById('opaqueScreen').innerHTML)
+		//console.log("SHOW "+document.getElementById('opaqueScreen').innerHTML)
 		if(document.getElementById('opaqueScreen').innerHTML == '-1')
 		{
 			var sT = getAssetPath("img","images/close-image.png");
 			var sContent = '<img src="'+sT+'" height="100%" />'
-			console.log(" sContent :: "+ sContent);
+			//console.log(" sContent :: "+ sContent);
 			document.getElementById('opaqueScreen').innerHTML = sContent;
 		}
 		
