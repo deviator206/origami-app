@@ -47,7 +47,7 @@ GamePlayScreen.prototype.setUp = function()
 					sHTMLContent += '</div>';
 					sHTMLContent += '<div class="qeusImg">';
 					var sA = getAssetPath("img",objContent[this.mApplication.nQuestionIndex].img_url);
-						sHTMLContent += '<img src="'+sA+'"  width=300/>';
+						sHTMLContent += '<img src="'+sA+'"  />';
 					sHTMLContent += '</div>';
 					
 				sHTMLContent += '</div>';
