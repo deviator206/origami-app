@@ -50,12 +50,15 @@
 
 				if (arrScriptIndex < arrScriptTags.length) {
 					if (arrScriptIndex < 1) {
-						AddCSS(getAssetPath("docs", arrScriptTags[arrScriptIndex]), startLoadingAssets);
+						AddCSS(getAssetPath("docs", arrScriptTags[arrScriptIndex]));
+						arrScriptIndex++;
+						startLoadingAssets();
 					} else {
 						AddScript(getAssetPath("docs", arrScriptTags[arrScriptIndex]), startLoadingAssets);
+						arrScriptIndex++;
 					}
 
-					arrScriptIndex++;
+					
 				} else {
 					document.getElementById('appContainer').style.display = "block"
 					document.getElementById('loading_script_tags').style.display = "none"
