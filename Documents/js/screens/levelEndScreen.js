@@ -124,4 +124,9 @@ function closeOverlay()
 		
 		document.getElementById('overlayScreen').style.display ="block";
 		document.getElementById('opaqueScreen').style.display ="block";
+		
+		document.getElementById('clickOverlayClose').onclick = function()
+		{
+			closeOverlay();
+		}
 	}
