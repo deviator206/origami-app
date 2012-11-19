@@ -52,7 +52,7 @@ GamePlayScreen.prototype.setUp = function()
 					
 				sHTMLContent += '</div>';
 		
-				sHTMLContent += '<div class="footer">';
+				sHTMLContent += '<div class="footer_stc">';
 				for(var i=1;i<5;i++)
 				{
 					var objContent_loop  = config['questionSet'+this.mApplication.nLevelCounter];

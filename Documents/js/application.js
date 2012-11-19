@@ -125,10 +125,10 @@ ApplicationWrapper.prototype.answerSelected = function(nSelected) {
 		this.nGameState = 100;
 		this.nextTransition();
 	} else {
-		//this.nGameState = 70;
-		//this.mCurrentScreen.showQuestionOverlay();
-		this.nGameState = 100;
-		this.nextTransition();
+		this.nGameState = 70;
+		this.mCurrentScreen.showQuestionOverlay();
+		//this.nGameState = 100;
+		//this.nextTransition();
 		
 	}
 
