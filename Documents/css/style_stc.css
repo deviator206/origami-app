@@ -242,7 +242,7 @@ height: 595px;
 
 .rgtMenu {
 	width: 130px;
-	height: 626px;
+	height: 595px;
 	position: absolute;
 	background-color: #CBCCCC;
 	float: right;
@@ -610,32 +610,39 @@ p.congEndTxt2 {
 	left: 0;
 	height: 627px;
 	width: 900px;
-	background-color: black;
-	/*opacity: 0.8;*/
 	display: none;
 	position: absolute;
 	z-index: 10;
-	color: white;
-	font-size: 34px;
-	font-weight: bold;
 }
 .opaqueScreenCSS_ForQuestion {
-	width: 100%;
-	height: 100%;
+font-family: verdana,arial,helvetica,sans-serif;
+	color: white;
+	background-color:#9C9999;
+	font-size: 34px;
+	width: 420px;
+	height: 103px;
 	position: absolute;
-	top: 182px;
-	left: 92px;
+	top: 170px;
+	left: 236px;
 	display: none;
+	text-align:center;
+	padding-top:78px;
+	font-style:24px;
+	
 }
 
 .closeOverlay_ForQuestion {
-	bottom: 0;
-	position: absolute;
-	right: 109px;
-	height: 172px;
-	width: 195px;
+font-family: verdana,arial,helvetica,sans-serif;
+bottom: 430px;
+position: absolute;
+right: 255px;
+height: 18px;
+width: 75px;
 	z-index: 10;
 	cursor: pointer;
+	color :white;
+	
+	
 }
 
 

@@ -35,7 +35,7 @@
 			//var arrScriptTags = new Array('css/style_stc.css', 'js/lib/PxLoader.js', 'js/lib/PxLoaderImage.js', 'js/model.js', 'js/screens/loadingScreen.js', 'js/screens/splashScreen.js', 'js/screens/howtoplayScreen.js', 'js/screens/gameplayScreen.js', 'js/screens/levelEndScreen.js', 'js/screens/winnerScreen.js', 'js/application.js');
 			var arrScriptTags = new Array('css/style_stc.css', 'js/app.js');
 			var arrScriptIndex = 0;
-			var arrDivNames = new Array('loading_script_tags', 'loadingScreen', 'splashScreen', 'howtoplayScreen', 'questionScreen', 'sidePanel', 'levelEndScreen', 'winnerScreen', 'overlayScreen')
+			var arrDivNames = new Array('loading_script_tags', 'loadingScreen', 'splashScreen', 'howtoplayScreen', 'questionScreen', 'sidePanel', 'levelEndScreen', 'winnerScreen', 'overlayScreen','overlayScreen_ForQuestion')
 			function makeAllInvisible() {
 				for (var i = 0; i < arrDivNames.length; i++)
 					document.getElementById(arrDivNames[i]).style.display = 'none'
@@ -168,8 +168,8 @@
 				<div id="clickOverlayClose" class="closeOverlay" ></div>
 			</div>
 			<div id="overlayScreen_ForQuestion" class="overlayScreenCSS_ForQuestion">
-					<div id="opaqueScreen_ForQuestion" class="opaqueScreenCSS_ForQuestion">-1</div>
-					<div id="clickQuestionTryAgain" class="closeOverlay_ForQuestion">TRY AGAIN</div>
+					<div id="opaqueScreen_ForQuestion" class="opaqueScreenCSS_ForQuestion">Please try again...</div>
+					<div id="clickQuestionTryAgain" class="closeOverlay_ForQuestion">Close X</div>
 				</div>
 			</div>
 
