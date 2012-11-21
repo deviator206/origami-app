@@ -17,8 +17,12 @@ GamePlayScreen.prototype.drawFooterImages = function(arr,color)
 	var sA;
 	for(var i =0;i<arr.length;i++)
 	{
-		sA = getAssetPath("img", "footer_images/" +arr[i]+""+color+".png");
-		sCnt += '<img src="'+sA+'" />';
+		//sA = getAssetPath("img", "footer_images/" +arr[i]+""+color+".png");
+		//sCnt += '<img src="'+sA+'" />';
+		//footerImageHolder_Stc
+		sA = "footer_images/" +arr[i]+""+color;
+		document.getElementById('footerImageHolder_Stc').appendChild(this.mApplication.imgArray[sA])
+		
 	}
 	
 	return sCnt;
@@ -52,24 +56,24 @@ GamePlayScreen.prototype.setUp = function()
 					
 				sHTMLContent += '</div>';
 		
-				sHTMLContent += '<div class="footer_stc">';
+				sHTMLContent += '<div id="footerImageHolder_Stc" class="footer_stc">';
+				sHTMLContent += '</div>';
+				document.getElementById(this.mDivName).innerHTML =sHTMLContent;
 				for(var i=1;i<5;i++)
 				{
 					var objContent_loop  = config['questionSet'+this.mApplication.nLevelCounter];
 					if(i < this.mApplication.nQuestionIndex)
 					{
 						
-						sHTMLContent += this.drawFooterImages(objContent_loop[i].q_cnt,'_red')	
+						this.drawFooterImages(objContent_loop[i].q_cnt,'_red')	
 					}
 					else
 					{
-						sHTMLContent += this.drawFooterImages(objContent_loop[i].q_cnt,'')
+						this.drawFooterImages(objContent_loop[i].q_cnt,'')
 					}
 				}
-				sHTMLContent += '</div>';
+				
 	
-	
-	document.getElementById(this.mDivName).innerHTML =sHTMLContent;
 	sHTMLContent ="";
 	 this.sidePanel();
 	
@@ -100,32 +104,44 @@ GamePlayScreen.prototype.sidePanel = function ()
 	var sA;
 	this.mApplication.showSelectedScreen('sidePanel');
 	var arrPercent = new Array(0,0,25,50,75,100);
-			sHTMLContent += '<div class="perc">You have completed<br>';
-			sHTMLContent += '<span> ' +arrPercent[this.mApplication.nQuestionIndex]+ '%</span><br>';
+			sHTMLContent += '<div id="sidePanelImages_Stc" class="perc">You have completed<br>';
+			sHTMLContent += '<span> ' +arrPercent[this.mApplication.nQuestionIndex]+ '%</span><br><br>';
+			sHTMLContent += '</div>';
+			document.getElementById('sidePanel').innerHTML =sHTMLContent;
 			for(var i=1;i<5;i++)
 			{
 				//console.log
 				if(i < this.mApplication.nLevelCounter)
 				{
-					sA = getAssetPath("img","sidepanel_images/level_"+i+"_image5.png");
+					//sA = getAssetPath("img","sidepanel_images/level_"+i+"_image5.png");
+					sA = "level_"+i+"_image5"
 			
 				}
 				else if(i ==  this.mApplication.nLevelCounter)
 				{
-					sA = getAssetPath("img","sidepanel_images/level_"+i+"_image"+this.mApplication.nQuestionIndex+ ".png");
-					//sA = getAssetPath("img","sidepanel_images/level_1_image"+this.mApplication.nQuestionIndex+ ".png");
+					//sA = getAssetPath("img","sidepanel_images/level_"+i+"_image"+this.mApplication.nQuestionIndex+ ".png");
+					sA = "level_"+i+"_image"+this.mApplication.nQuestionIndex;
+					
 				}
 				else
 				{
-					sA = getAssetPath("img","sidepanel_images/level_"+i+"_image1.png");
+					//sA = getAssetPath("img","sidepanel_images/level_"+i+"_image1.png");
+					sA = "level_"+i+"_image1";
 				}
 				
-				sHTMLContent += '<img src="'+sA+'" /><br>';	
+				//sHTMLContent += '<img src="'+sA+'" /><br>';	
+				//console.log(':: '+this.mApplication.imgArray[sA])
+				document.getElementById('sidePanelImages_Stc').appendChild(this.mApplication.imgArray[sA]);
+				var brTag1= document.createElement("br");
+				var brTag2 = document.createElement("br");
+				document.getElementById('sidePanelImages_Stc').appendChild(brTag1);
+				document.getElementById('sidePanelImages_Stc').appendChild(brTag2);
 			}
-			sHTMLContent += '</div>';
+			document.getElementById('sidePanel').className = 'rgtMenu'
 			
-	document.getElementById('sidePanel').innerHTML =sHTMLContent;
-	document.getElementById('sidePanel').className = 'rgtMenu'
+			
+	
+	
 }
 
 
@@ -137,7 +153,7 @@ function closeQuestionOverlay()
 	{
 		document.getElementById('overlayScreen_ForQuestion').style.display ="none";
 		document.getElementById('opaqueScreen_ForQuestion').style.display ="none";
-		DOMWrapper.nextTransition();
+		//DOMWrapper.nextTransition();
 	}
 GamePlayScreen.prototype.showQuestionOverlay = function()
 	{

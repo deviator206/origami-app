@@ -18,31 +18,42 @@ LevelEndScreen.prototype.sidePanel = function ()
 	
 	this.mApplication.showSelectedScreen('sidePanel');
 	var arrPercent = new Array(0,0,25,50,75,100);
-			sHTMLContent += '<div class="perc">You have completed<br>';
-			sHTMLContent += '<span> 100%</span><br>';
+			sHTMLContent += '<div  id ="sidePanelImages_Stc" class="perc">You have completed<br>';
+			sHTMLContent += '<span> 100%</span><br><br>';
+			sHTMLContent += '</div>';
+			document.getElementById('sidePanel').innerHTML =sHTMLContent;
 			for(var i=1;i<5;i++)
 			{
 				//console.log
 				if(i < this.mApplication.nLevelCounter)
 				{
-					sA = getAssetPath("img","sidepanel_images/level_"+i+"_image5.png");
+					//sA = getAssetPath("img","sidepanel_images/level_"+i+"_image5.png");
+					sA = "level_"+i+"_image5";
 			
 				}
 				else if(i ==  this.mApplication.nLevelCounter)
 				{
-					sA = getAssetPath("img","sidepanel_images/level_"+i+"_image5.png");
-					//sA = getAssetPath("img","sidepanel_images/level_1_image5.png");
+					//sA = getAssetPath("img","sidepanel_images/level_"+i+"_image5.png");
+					sA = "level_"+i+"_image5";
+					
 				}
 				else
 				{
-					sA = getAssetPath("img","sidepanel_images/level_"+i+"_image1.png");
+					//sA = getAssetPath("img","sidepanel_images/level_"+i+"_image1.png");
+					sA = "level_"+i+"_image1";
 				}
+						//console.log(sA+ ":: "+this.mApplication.imgArray[sA])
+				document.getElementById('sidePanelImages_Stc').appendChild(this.mApplication.imgArray[sA]);
+				var brTag1= document.createElement("br");
+				var brTag2 = document.createElement("br");
+				document.getElementById('sidePanelImages_Stc').appendChild(brTag1);
+				document.getElementById('sidePanelImages_Stc').appendChild(brTag2);
 				
-				sHTMLContent += '<img src="'+sA+'" /><br>';	
+				//sHTMLContent += '<img src="'+sA+'" /><br>';	
 			}
-			sHTMLContent += '</div>';
+			//sHTMLContent += '</div>';
 			
-	document.getElementById('sidePanel').innerHTML =sHTMLContent;
+	//document.getElementById('sidePanel').innerHTML =sHTMLContent;
 	document.getElementById('sidePanel').className = 'rgtMenu'
 }
 
@@ -74,6 +85,7 @@ LevelEndScreen.prototype.setUp = function()
             	
          document.getElementById(this.mDivName).innerHTML =sContentHTML;
          var sT = getAssetPath("img","levelend_images/Level_"+this.mApplication.nLevelCounter+".png");
+		 
          document.getElementById('peacockContainer1').style.backgroundImage = 'url('+sT+ ')'
     
     document.getElementById('start_next_level').onclick= function()

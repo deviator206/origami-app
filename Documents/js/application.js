@@ -180,6 +180,7 @@ function ApplicationWrapper() {
 	this.bcarouselCreated = false;
 	this.arrQuestion = null;
 	DOMWrapper = this;
+	this.imgArray ={}
 	return this;
 }
 
