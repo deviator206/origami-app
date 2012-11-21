@@ -32,8 +32,8 @@
 				return sTemp;
 			}
 
-			var arrScriptTags = new Array('css/style_stc.css', 'js/lib/PxLoader.js', 'js/lib/PxLoaderImage.js', 'js/model.js', 'js/screens/loadingScreen.js', 'js/screens/splashScreen.js', 'js/screens/howtoplayScreen.js', 'js/screens/gameplayScreen.js', 'js/screens/levelEndScreen.js', 'js/screens/winnerScreen.js', 'js/application.js');
-			//var arrScriptTags = new Array('css/style_stc.css', 'js/app.js');
+			//var arrScriptTags = new Array('css/style_stc.css', 'js/lib/PxLoader.js', 'js/lib/PxLoaderImage.js', 'js/model.js', 'js/screens/loadingScreen.js', 'js/screens/splashScreen.js', 'js/screens/howtoplayScreen.js', 'js/screens/gameplayScreen.js', 'js/screens/levelEndScreen.js', 'js/screens/winnerScreen.js', 'js/application.js');
+			var arrScriptTags = new Array('css/style_stc.css', 'js/app.js');
 			var arrScriptIndex = 0;
 			var arrDivNames = new Array('loading_script_tags', 'loadingScreen', 'splashScreen', 'howtoplayScreen', 'questionScreen', 'sidePanel', 'levelEndScreen', 'winnerScreen', 'overlayScreen','overlayScreen_ForQuestion')
 			function makeAllInvisible() {
@@ -152,7 +152,7 @@
 					</div>
 
 					<div id="appContainer">
-						<div id="loadingScreen" style="display: block;margin-left: 200px;margin-top: 200px;"></div>
+						<div id="loadingScreen" style="display: block;margin-left: 240px;margin-top: 200px;"></div>
 						<div id="splashScreen"></div>
 						<div id="howtoplayScreen"></div>
 						<div id="questionScreen"></div>
@@ -164,7 +164,8 @@
 				</div>
 				<div id="sidePanel"></div>
 				<div id="overlayScreen" class="overlayScreenCSS">
-				<div id="opaqueScreen" class="opaqueScreenCSS">-1</div>
+				<div id="opaqueScreen_bg" class="opaqueScreenCSS"></div>
+				<div id="opaqueScreen" class="opaqueScreenCSS_1">-1</div>
 				<div id="clickOverlayClose" class="closeOverlay" ></div>
 			</div>
 			<div id="overlayScreen_ForQuestion" class="overlayScreenCSS_ForQuestion">

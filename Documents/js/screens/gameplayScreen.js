@@ -19,8 +19,10 @@ GamePlayScreen.prototype.drawFooterImages = function(arr,color)
 	{
 		//sA = getAssetPath("img", "footer_images/" +arr[i]+""+color+".png");
 		//sCnt += '<img src="'+sA+'" />';
+		//console.log('>>>>><<<'+sA)
 		//footerImageHolder_Stc
 		sA = "footer_images/" +arr[i]+""+color;
+		//console.log('>>>'+sA)
 		document.getElementById('footerImageHolder_Stc').appendChild(this.mApplication.imgArray[sA])
 		
 	}
@@ -38,7 +40,7 @@ GamePlayScreen.prototype.setUp = function()
 	sHTMLContent += '<div class="levelTxt"><span>Level '+this.mApplication.nLevelCounter+'</span> | Q. No: ' +this.mApplication.nQuestionIndex+ '/' +this.mApplication.arrLevelTotalQuestion[this.mApplication.nLevelCounter]+ '</div>';
 				sHTMLContent += '<div class="qCont">';
 					sHTMLContent += '<div class="questDiv">';
-						sHTMLContent += '<div class="quesTxt">';
+						sHTMLContent += '<div class="quesTxt endCongrats_level'+this.mApplication.nLevelCounter+'">';
 							//sHTMLContent += 'By 2050, India will have 160,000,000 wireless broadbandand optic fiber-based connections. That\'s equal to....';
 							sHTMLContent += objContent[this.mApplication.nQuestionIndex].question; 
 						sHTMLContent += '</div>';
@@ -62,6 +64,7 @@ GamePlayScreen.prototype.setUp = function()
 				for(var i=1;i<5;i++)
 				{
 					var objContent_loop  = config['questionSet'+this.mApplication.nLevelCounter];
+					//console.log(' i : '+i);
 					if(i < this.mApplication.nQuestionIndex)
 					{
 						

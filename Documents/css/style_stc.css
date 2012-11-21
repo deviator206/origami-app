@@ -425,13 +425,11 @@ height: 595px;
 }
 
 .successTxt span {
-	color: #DC4510;
 	font-weight: bold;
 	margin-left: 5px !important;
 }
 
 p.congEndTxt2 {
-	color: #3F8FCC;
 	margin-top: 50px !important;
 	margin-left: 50px !important;
 	font-size: 40px;
@@ -441,7 +439,7 @@ p.congEndTxt2 {
 .levlComplTxt {
 	font-size: 18px !important;
 	line-height: 25px !important;
-	color: #DC4510 !important;
+	color: #DC4510 ;
 	margin-left: 50px !important;
 }
 
@@ -472,7 +470,6 @@ p.congEndTxt2 {
 .nxtLink a:link, a:visited, a:hover, a:active {
 	font-size: 18px !important;
 	line-height: 25px !important;
-	color: #DC4510 !important;
 	margin-left: 50px !important;
 	font-weight: bold !important;
 }
@@ -482,7 +479,7 @@ p.congEndTxt2 {
 	position: absolute;
 	top: 52px;
 	font-size: 17px;
-	margin-left: 30px;
+	margin-left: 32px;
 }
 
 .qCont {
@@ -537,8 +534,8 @@ p.congEndTxt2 {
 .qeusImg {
 	width: 390px;
 	height: auto;
-	position: relative;
-	float: left;
+margin-left: 350px;
+position: absolute;
 }
 
 .perc {
@@ -562,7 +559,7 @@ p.congEndTxt2 {
 	position: absolute;
 	/*top: 502px;*/
 	top: 480px;
-	left: 35px;
+	left: 50px;
 }
 
 .footer_stc img {
@@ -578,20 +575,35 @@ p.congEndTxt2 {
 	left: 0;
 	height: 627px;
 	width: 900px;
-	background-color: black;
+	
 	/*opacity: 0.8;*/
 	display: none;
 	position: absolute;
 	z-index: 10;
 }
-.opaqueScreenCSS{
+
+.opaqueScreenCSS_1
+{
+	height: 560px;
+position: absolute;
+top: 16px;
+left: 160px;
+	display: none;
+}
+
+
+.opaqueScreenCSS
+{
 	width: 100%;
 	height: 594px;
 	position: absolute;
 	top: 0;
-	left: 92px;
+	background-color: black;
+	opacity: 0.5;
 	display: none;
 }
+
+
 
 .closeOverlay{
 	/*border: #0C3 solid 1px;*/
@@ -615,7 +627,7 @@ p.congEndTxt2 {
 	z-index: 10;
 }
 .opaqueScreenCSS_ForQuestion {
-font-family: verdana,arial,helvetica,sans-serif;
+	font-family: verdana,arial,helvetica,sans-serif;
 	color: white;
 	background-color:#9C9999;
 	font-size: 34px;
@@ -628,6 +640,7 @@ font-family: verdana,arial,helvetica,sans-serif;
 	text-align:center;
 	padding-top:78px;
 	font-style:24px;
+	opacity: 0.95;
 	
 }
 
@@ -646,3 +659,46 @@ width: 75px;
 }
 
 
+.endNormal
+{
+	color :#666666;
+}
+
+.endCongrats_level1
+{
+	color :#6487bf;
+}
+
+
+.endCongrats_level2
+{
+	color :#2f9b45;
+}
+
+.endCongrats_level3
+{
+	color :#9a2f99;
+}
+
+.endCongrats_level4
+{
+	color :#0e86a9;
+}
+
+
+.endMain_level1
+{
+	color :#e04300;
+}
+.endMain_level2
+{
+	color :#239DC4;
+}
+.endMain_level3
+{
+	color :#66ac3a;
+}
+.endMain_level4
+{
+	color :#ff9d00;
+}

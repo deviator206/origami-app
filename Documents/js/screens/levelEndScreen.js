@@ -7,6 +7,7 @@ function LevelEndScreen (app)
 {
 	this.mApplication = app;
 	this.mDivName ="levelEndScreen";
+	
 	this.setUp();
 	
 }
@@ -66,20 +67,20 @@ LevelEndScreen.prototype.setUp = function()
 	this.mApplication.showSelectedScreen('sidePanel');
 	var sContentHTML = "";
 	sContentHTML = '<div id="peacockContainer1" class="levelEndImg" style="ba"></div>';
-	sContentHTML += '<div stye="position:absolute;"> <p class="congEndTxt2">Congratulations!</p>';		
-            sContentHTML += '<p class="successTxt">';
+	sContentHTML += '<div stye="position:absolute;"> <p class="congEndTxt2 endCongrats_level' +this.mApplication.nLevelCounter+ '">Congratulations!</p>';		
+            sContentHTML += '<p class="successTxt endNormal">';
             sContentHTML += '	You have successfully completed';
             sContentHTML += '</p>';
             sContentHTML += '<p class="successTxt">';
-            	sContentHTML += '<b>Level ' +this.mApplication.nLevelCounter+ ':</b><span>' +config['level_'+this.mApplication.nLevelCounter+'_End'].topic+ '</span>';
+            	sContentHTML += '<b>Level ' +this.mApplication.nLevelCounter+ ':</b><span class="endMain_level' +this.mApplication.nLevelCounter+ '">' +config['level_'+this.mApplication.nLevelCounter+'_End'].topic+ '</span>';
             sContentHTML += '</p>';
-            sContentHTML += '<p class="levlComplTxt">';
+            sContentHTML += '<p class="levlComplTxt endMain_level'+this.mApplication.nLevelCounter+ '">';
             	sContentHTML += ''+ config['level_'+this.mApplication.nLevelCounter+'_End'].content
             sContentHTML += '</p>';
             sContentHTML += '<div  id="start_next_level" class="nextButton">Next Level</div>';
-            sContentHTML += '<div class="nxtLink">	';
-            	sContentHTML += '<br/ ><br/ ><br/ ><br/ >';
-            	sContentHTML += '<a href="javascript:showOverlay();" id ="linkToHB" >Master the Humming Bird origami here!</a>';
+            sContentHTML += '<div class="nxtLink endMain_level'+this.mApplication.nLevelCounter+ '">	';
+            	sContentHTML += '<br/ ><br/><br/ ><br/>';
+            	sContentHTML += '<a href="javascript:showOverlay();" id ="linkToHB" ><span class="endMain_level'+this.mApplication.nLevelCounter+ '">Master the Humming Bird origami here! </span></a>';
             sContentHTML += '</div>';
             sContentHTML += '</div>';
             	
@@ -128,12 +129,14 @@ function closeOverlay()
 		//console.log("SHOW "+document.getElementById('opaqueScreen').innerHTML)
 		if(document.getElementById('opaqueScreen').innerHTML == '-1')
 		{
-			var sT = getAssetPath("img","images/close-image.jpg");
+			var sT = getAssetPath("img","images/close-image.png");
 			var sContent = '<img src="'+sT+'" height="100%" />'
 			//console.log(" sContent :: "+ sContent);
 			document.getElementById('opaqueScreen').innerHTML = sContent;
 		}
 		
+		
+		document.getElementById('opaqueScreen_bg').style.display ="block";
 		document.getElementById('overlayScreen').style.display ="block";
 		document.getElementById('opaqueScreen').style.display ="block";
 		
