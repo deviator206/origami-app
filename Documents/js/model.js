@@ -136,7 +136,7 @@ var config ={
 			'solution':"With Accenture's help, Tata Motors has developed an innovative, scalable and sustainable platform for growth in rural markets. Project Neev's (foundation in Sanskrit) potential value has been confirmed by the results from the first-wave deployment areas. To date, the project has delivered more than 7,000 retail sales within the target territories. With successful scaling up of operations, Tata Motors is on track to garner an incremental business growth of roughly 15-20% from its new rural channels."
 		},
 		{
-			'question':"Accenture's Skills to Succeed program has enabled India's journey to High Performance,helping businesses to grow right now because...",
+			'question':"Accenture's Skills to Succeed program has enabled India's journey to High Performance, helping businesses to grow right now because...",
 			'option_1':"Only 2% of Indians aged 15-29 have formal vocational training",
 			'option_2':"BPO, retail and hospitality are facing a shortfall in terms of employable talent",
 			'option_3':"India's continued economic growth depends on MNC investments",
@@ -246,7 +246,7 @@ var config ={
 		},
 		
 		{
-			'question':"India is currently executing 450 Public-Private Partnerships(PPPs) valued at US$50billion. Which of these endeavors would benefit from a PPP? ",
+			'question':"India is currently executing 450 Public-Private Partnerships (PPPs) valued at US$50billion. Which of these endeavors would benefit from a PPP? ",
 			'option_1':"Infrastructure creation",
 			'option_2':"Urban development ",
 			'option_3':"Education ",

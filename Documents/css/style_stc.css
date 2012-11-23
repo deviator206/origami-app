@@ -659,14 +659,14 @@ left: 160px;
 
 .closeOverlay_ForQuestion {
 font-family: verdana,arial,helvetica,sans-serif;
-bottom: 430px;
+bottom: 423px;
 position: absolute;
-right: 255px;
-height: 18px;
-width: 75px;
-	z-index: 10;
-	cursor: pointer;
-	color :white;
+right: 242px;
+height: 27px;
+width: 82px;
+z-index: 10;
+cursor: pointer;
+color: white;
 	
 	
 }
