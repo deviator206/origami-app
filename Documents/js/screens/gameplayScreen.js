@@ -36,19 +36,38 @@ GamePlayScreen.prototype.setUp = function()
 	this.mApplication.showScreen(this.mDivName)
 	
 	var sHTMLContent = "";
+	var arrClassName = "";
+	var aDistance= "spacingMore";
+	if(this.mApplication.nLevelCounter == 2 && this.mApplication.nQuestionIndex == 4)
+	{
+	arrClassName = "spacingKam";
+	aDistance= "";
+	}
+	
 	var objContent  = config['questionSet'+this.mApplication.nLevelCounter];	
 	sHTMLContent += '<div class="levelTxt"><span>Level '+this.mApplication.nLevelCounter+'</span> | Q. No: ' +this.mApplication.nQuestionIndex+ '/' +this.mApplication.arrLevelTotalQuestion[this.mApplication.nLevelCounter]+ '</div>';
 				sHTMLContent += '<div class="qCont">';
 					sHTMLContent += '<div class="questDiv">';
-						sHTMLContent += '<div class="quesTxt endCongrats_level'+this.mApplication.nLevelCounter+'">';
+						sHTMLContent += '<div class="quesTxt endCongrats_level'+this.mApplication.nLevelCounter+' '+aDistance+'">';
 							//sHTMLContent += 'By 2050, India will have 160,000,000 wireless broadbandand optic fiber-based connections. That\'s equal to....';
 							sHTMLContent += objContent[this.mApplication.nQuestionIndex].question; 
 						sHTMLContent += '</div>';
 						sHTMLContent += '<div class="ansBox">';
-							sHTMLContent += '<div id ="option_1" class="ansTxt">A. '+ objContent[this.mApplication.nQuestionIndex].option_1+ '</div>';
-							sHTMLContent += '<div id ="option_2"  class="ansTxt">B. '+ objContent[this.mApplication.nQuestionIndex].option_2+ '</div>';
-							sHTMLContent += '<div id ="option_3"  class="ansTxt">C. '+ objContent[this.mApplication.nQuestionIndex].option_3+ '</div>';
-							sHTMLContent += '<div id ="option_4"  class="ansTxt">D. '+ objContent[this.mApplication.nQuestionIndex].option_4+ '</div>';
+						
+						sHTMLContent += '<ol type="A" style=" margin-left: -13px! Important; ">'
+						sHTMLContent += '<li style=" font-size: 16px; font-weight: bold; margin-left: 0; ">'	
+							sHTMLContent += '<div id ="option_1" class="ansTxt '+arrClassName+'">'+ objContent[this.mApplication.nQuestionIndex].option_1+ '</div>';
+							sHTMLContent += '</li>'	
+							sHTMLContent += '<li style=" font-size: 16px; font-weight: bold; margin-left: 0; ">'	
+							sHTMLContent += '<div id ="option_2"  class="ansTxt '+arrClassName+'">'+ objContent[this.mApplication.nQuestionIndex].option_2+ '</div>';
+							sHTMLContent += '</li>';
+							sHTMLContent += '<li style=" font-size: 16px; font-weight: bold; margin-left: 0; ">'	;
+							sHTMLContent += '<div id ="option_3"  class="ansTxt '+arrClassName+'">'+ objContent[this.mApplication.nQuestionIndex].option_3+ '</div>';
+							sHTMLContent += '</li>';	
+							sHTMLContent += '<li style=" font-size: 16px; font-weight: bold; margin-left: 0; ">';	
+							sHTMLContent += '<div id ="option_4"  class="ansTxt '+arrClassName+'">'+ objContent[this.mApplication.nQuestionIndex].option_4+ '</div>';
+							sHTMLContent += '</li>'	
+							sHTMLContent += '</ol>'
 						sHTMLContent += '</div>';
 					sHTMLContent += '</div>';
 					sHTMLContent += '<div class="qeusImg">';

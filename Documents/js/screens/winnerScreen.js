@@ -19,7 +19,18 @@ WinnerScreen.prototype.setUp = function()
 	this.mApplication.showScreen(this.mDivName)
 	//this.mApplication.showSelectedScreen('grey_bottom');
 	var sContentHTML = "";
-	sContentHTML = '<h1 class="congEndTxt">CONGRATULATIONS</h1>';		
+	
+	sContentHTML += '<div >';	
+				sContentHTML += '<div id="winner_screen_img_holder" style="width:839px; height:470px;margin-top: 50px;margin-left: 25px;"></div><br/>';	
+				sContentHTML += '<div id= "learn_more" class="clickButton clickHereMore_Hack">Click here to learn more!</div>';
+		sContentHTML += '</div>';
+			
+			document.getElementById(this.mDivName).innerHTML =sContentHTML;
+			
+			var sA = "images-winner-end-screen";
+			document.getElementById('winner_screen_img_holder').appendChild(this.mApplication.imgArray[sA])
+			
+	/*sContentHTML = '<h1 class="congEndTxt">CONGRATULATIONS</h1>';		
             sContentHTML += '<p class="congEndPara">';
             	sContentHTML += 'You are now a master!';
             sContentHTML += '</p>';
@@ -35,6 +46,8 @@ WinnerScreen.prototype.setUp = function()
 	document.getElementById('winnerScreen').innerHTML = ''+sContentHTML;
 	var sT = getAssetPath("img","images/congratsEnd.png");
 	document.getElementById('peacockContainer').style.backgroundImage = 'url('+sT+ ')'
+	*/
+	
 	document.getElementById('learn_more').onclick= function()
 	{
 		that.mApplication.setGameState(140);		

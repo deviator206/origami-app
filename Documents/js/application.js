@@ -70,7 +70,7 @@ ApplicationWrapper.prototype.startTheGamePlay = function() {
 		// next level to be shown
 		//console.log(' : : ' + this.nLevelCounter + " :v/s:" + this.arrLevelTotalQuestion.length);
 
-		if (this.nLevelCounter <= this.arrLevelTotalQuestion.length - 2) {
+		if (this.nLevelCounter <= this.arrLevelTotalQuestion.length - 1) {
 
 			this.nGameState = 110;
 			this.nextTransition();
@@ -79,7 +79,7 @@ ApplicationWrapper.prototype.startTheGamePlay = function() {
 			//this.startTheGamePlay();
 
 		} else {
-			this.nGameState = 130;
+			this.nGameState = 110;
 			this.nextTransition();
 
 		}

@@ -15,13 +15,13 @@ button,
 input,
 select,
 textarea {
-    color: #222;
+    color: #666;
 }
 
 body {
     /*font-size: 1em;
     line-height: 1.4;*/
-	font-family: Arial,Helvetica,sans-serif;
+	font-family: Arial Regular;
 }
 
 a {
@@ -185,21 +185,6 @@ textarea[contenteditable] {
 }
 
 /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   Theses examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
-
-@media only screen and (min-width: 800px) {
-    /* Style adjustments for viewports that meet the condition */
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
-       only screen and (min-resolution: 144dpi) {
-    /* Style adjustments for viewports that meet the condition */
-}
-
-/* ==========================================================================
    Author's custom styles
    ========================================================================== */
    
@@ -209,7 +194,7 @@ textarea[contenteditable] {
 	/*width: 918px;
 	height: 600px;*/
 	width: 918px;
-height: 595px;
+	height: 595px;
 	margin: 0 auto;
 	position: relative;
 }
@@ -254,9 +239,10 @@ height: 595px;
        width: 369px;
        height: 429px;
        float: left;
-       margin-top: 30px;
-       margin-left: 50px;
-       font-size: 14px;
+         margin-left: 15px;
+		margin-top: 43px;
+		line-height: 24px;
+       font-size: 16px;
 }
 
 .introScreen ul {
@@ -267,9 +253,7 @@ height: 595px;
 
 .introScreen li {
 	margin: 0 5px 0 0 !important;
-       font-size:14px !important;
-       color: #666 !important;
-       line-height:17px !important;
+	font-size: 12px !important;
 }
 
 .introScreen p {
@@ -289,7 +273,7 @@ height: 595px;
 }
 
 .playButton {
-	background-color: #CCCCCC;
+/*	background-color: #CCCCCC;
 	color: #666;
 	float: left;
 	font-size: 20px;
@@ -297,8 +281,22 @@ height: 595px;
 	height: 43px;
 	line-height: 40px;
 	margin-left: 32px;
-	margin-top: 33px;
+	margin-top: 56px;
 	position: static;
+	text-align: center;
+	width: 131px;
+	cursor: pointer;*/
+		background-color: #CCCCCC;
+	color: #666;
+	float: left;
+	font-size: 20px;
+	/*font-weight: bold;*/
+	font-weight: normal;
+	height: 43px;
+	line-height: 40px;
+	margin-left: 410px;
+	margin-top: -95px;
+	position: absolute;
 	text-align: center;
 	width: 131px;
 	cursor: pointer;
@@ -310,9 +308,9 @@ height: 595px;
 }
 
 .figTitle {
-	font-size: 11px;
+	font-size: 13px;
 	font-weight: bold;
-	margin-left: 17px;
+	/*margin-left: 17px;*/
 	margin-top: 5px;
 }
 
@@ -323,7 +321,7 @@ height: 595px;
 
 .hwpList li {
 	margin: 0 18px 0 20px !important;
-	font-size: 16px !important;
+	font-size: 18px !important;
 	color: #666 !important;
 	line-height: 27px !important;
 }
@@ -334,8 +332,7 @@ height: 595px;
 	color: #666;
 	line-height: 22px;*/
 	margin-left: 43px !important;
-	font-size: 16px;
-	color: #201F1F !important;
+	font-size: 18px;
 	line-height: 22px;
 }
 
@@ -344,11 +341,12 @@ height: 595px;
 	color: #666;
 	float: left;
 	font-size: 20px;
-	font-weight: bold;
+	/*font-weight: bold;*/
+	font-weight: normal;
 	height: 43px;
 	line-height: 40px;
-	margin-left: 43px;
-	margin-top: 17px;
+	margin-left: 28px;
+	margin-top: 16px;
 	position: static;
 	text-align: center;
 	width: 100px;
@@ -361,8 +359,9 @@ height: 595px;
 }
 
 .howPlayBtn {
-	margin-left: 17px;
-	margin-top: 17px;
+	margin-left: 150px;
+margin-top: 16px;
+	
 }
 
 .congEndTxt {
@@ -384,7 +383,9 @@ height: 595px;
 	color: #666;
 	float: left;
 	font-size: 20px;
-	font-weight: bold;
+	/*font-weight: bold;*/
+	/*font-weight: bold;*/
+	font-weight: normal;
 	height: 43px;
 	line-height: 40px;
 	margin-left: 62px;
@@ -448,10 +449,11 @@ p.congEndTxt2 {
 	color: #666 !important;
 	float: left !important;
 	font-size: 20px !important;
-	font-weight: bold !important;
+	/*font-weight: bold !important;*/
+	font-weight: normal !important;
 	height: 43px !important;
 	line-height: 40px !important;
-	margin-left: 50px !important;
+	margin-left: 30px !important;
 	margin-top: 17px !important;
 	position: static !important;
 	text-align: center !important;
@@ -477,7 +479,7 @@ p.congEndTxt2 {
 .levelTxt {
 	height: 20px;
 	position: absolute;
-	top: 52px;
+	top: 48px;
 	font-size: 17px;
 	margin-left: 32px;
 }
@@ -487,7 +489,7 @@ p.congEndTxt2 {
 	float: left;
 	height: auto;
 	width: 95%;
-	top: 100px;
+	top: 62px;
 	left: 23px;
 }
 
@@ -518,14 +520,23 @@ p.congEndTxt2 {
 
 .ansTxt {
 	color: #666;
-	font-size: 17px;
-	font-weight: bold;
-	position: relative;
-	margin: 23px;
-	margin-left: 0;
-	padding: 3px;
+	font-size: 16px;
+font-weight: bold;
+position: relative;
+margin: 18px;
+margin-left: 0;
+padding: 3px;
+width: 250px;
+}
+.spacingKam
+{
+margin: 9px;
 }
 
+.spacingMore
+{
+padding-bottom: 23px
+}
 .ansTxt:hover {
 	color: #DC4510;
 	cursor: pointer;
@@ -533,22 +544,24 @@ p.congEndTxt2 {
 
 .qeusImg {
 	width: 390px;
-	height: auto;
-margin-left: 350px;
+height: auto;
+margin-left: 309px;
 position: absolute;
+text-align: right
 }
 
 .perc {
 	color: #777;
-	font-size: 17px;
-	font-weight: bold;
-	margin-top: 28px;
-	text-align: center;
+	font-size: 16px;
+font-weight: bold;
+margin-top: 28px;
+text-align: left;
+margin-left: 19px;
 }
 
 .perc span {
 	color: #FFFFFF;
-	font-size: 41px;
+	font-size: 34px;
 }
 
 .footer_stc {
@@ -689,16 +702,62 @@ width: 75px;
 .endMain_level1
 {
 	color :#e04300;
+	
 }
 .endMain_level2
 {
 	color :#239DC4;
 }
-.endMain_level3
+.endMain_level4
 {
 	color :#66ac3a;
 }
-.endMain_level4
+.endMain_level3
 {
 	color :#ff9d00;
+}
+
+
+.bulletIndent
+{
+	text-indent: -5px !Important; 
+}
+
+.introFontSizes
+{
+font-size: 14px !Important;
+}
+
+.introMainHeadLineText
+{
+	font-size: 23px !Important;
+	padding-bottom: 14px !Important;
+}
+
+.introParaSplStyling
+{
+line-height: 24px;
+font-size: 14px ! Important;
+margin-top: -14px ! Important;
+
+}
+
+.li_styling
+{
+	line-height: 24px;
+	font-size: 14px ! Important;
+}
+
+.para_styling_stc
+{
+line-height: 24px;
+font-size: 14px ! Important;
+width: 352px;
+}
+
+.clickHereMore_Hack
+{
+position: absolute;
+margin-top: -265px;
+margin-left: 33px
 }

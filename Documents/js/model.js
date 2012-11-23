@@ -1,5 +1,19 @@
 /**
 @the-Deviator
+
+,
+		{
+			'question':"How many people does the government want to see skilled by 2022 as part of the National Skill Development Corporation program?",
+			'option_1':"1 billion",
+			'option_2':"10 million",
+			'option_3':"500 million",
+			'option_4':"150 million",
+			'img_url':"question_images/Level_2_q_2.png",
+			'correct_answer':"3",
+			'q_cnt':['level_2_q_4_a'],
+			'solution':"Accenture helped BSES Delhi reduce malpractices and strengthen its financial footing by reducing operating costs. As a result, from March '05 through to March '06, electricity losses reduced from 40.64% to 35.53% (South and West Delhi) and from 50.12% to 43.88% (Central and East Delhi). "
+		}
+		
 */
 
 var config ={
@@ -10,9 +24,10 @@ var config ={
 	level_2_End :{content:'The Eagle stands for the dramatic influence of <br />power through its fastflight supported by a strong <br />build justlike the Empowered People of a High<br/>Performance Nation, who drive India\'s growth <br>with skills that are economically significant, richly <br>diverse and tuned to future leadership opportunities.',
 	topic:'Eagle'},
 	level_3_End :{content:'The Baya Weaver, a weaver bird, defies<br/>convention to create intricately woven hanging <br/>nests that protect both itself and the community <br/>from predators,exemplifying innovation that <br/>seeks to address the needs of the masses. <br/>The bird thus represents the Innovation Economy <br/>pillar of the High Performance Nation.',
-	topic:'Weaver Bird'},
+	topic:'Albatross'
+	},
 	level_4_End :{content:'The Albatross, a large sea bird, covers<br/>vast distances with optimal exertion and<br/>energy by flying in large groups. Thus,<br/>this bird demonstrates the effectiveness<br/>of driving results through a Collaborative<br/>Ecosystem, the fourth pillar of a High<br/>Performance Nation.',
-	topic:'Albatross'},
+	topic:'Weaver Bird'},
 	questionSet1:[
 		{
 			'question':"What does this commercial vehicle have in common with a winning hand of cards? ",
@@ -43,7 +58,7 @@ var config ={
 			'option_3':"Nagaland & Sikkim",
 			'option_4':"Iowa & Indiana",
 			'img_url':"question_images/Level_1_q_2.png",
-			'correct_answer':"1",
+			'correct_answer':"3",
 			'q_cnt':['level_1_q_2_a','level_1_q_2_b'],
 			'solution':"With operations in over 100 countries, Unilever asked us to help simplify, standardize and unify their business model. Our teams worked to implement a single HR and talent management model, a harmonized ERP platform as well as other restructuring projects. So far, the results have helped Unilever achieve over &euro; 1 billion in savings and more than halved the time for a new IT systems rollout."
 		},
@@ -56,7 +71,7 @@ var config ={
 			'option_3':"139,000",
 			'option_4':"1300",
 			'img_url':"question_images/Level_1_q_3.png",
-			'correct_answer':"1",
+			'correct_answer':"3",
 			'q_cnt':['level_1_q_3_a'],
 			'solution':"Trinity Health has always worked to fulfill a mission to provide affordable healthcare to the community. Accenture helped them consolidate their revenue operations into a single unit. This generated more than $500 million in additional revenue over three years and allowed Trinity to continue to reinvest back into the health of the community."
 		},
@@ -67,7 +82,7 @@ var config ={
 			'option_3':"Public access to information",
 			'option_4':"All of the above",
 			'img_url':"question_images/Level_1_q_4.png",
-			'correct_answer':"1",
+			'correct_answer':"4",
 			'q_cnt':['level_1_q_4_a'],
 			'solution':"The Ace is Tata Motors' highly successful Small Commercial Vehicle. By focusing on customer segmentation, network optimization, pipeline management and sales operations, the project team helped Tata Motors generate approximately $45 million in additional revenue and significantly boost market share in all states - all in less than nine months."
 		}],
@@ -104,7 +119,7 @@ var config ={
 			'option_3':"500 million",
 			'option_4':"150 million",
 			'img_url':"question_images/Level_2_q_2.png",
-			'correct_answer':"1",
+			'correct_answer':"3",
 			'q_cnt':['level_2_q_2_a','level_2_q_2_b'],
 			'solution':"Accenture helped BSES Delhi reduce malpractices and strengthen its financial footing by reducing operating costs. As a result, from March '05 through to March '06, electricity losses reduced from 40.64% to 35.53% (South and West Delhi) and from 50.12% to 43.88% (Central and East Delhi). "
 		},
@@ -116,29 +131,18 @@ var config ={
 			'option_3':"8%",
 			'option_4':"5%",
 			'img_url':"question_images/Level_2_q_3.png",
-			'correct_answer':"1",
+			'correct_answer':"4",
 			'q_cnt':['level_2_q_3_a'],
 			'solution':"With Accenture's help, Tata Motors has developed an innovative, scalable and sustainable platform for growth in rural markets. Project Neev's (foundation in Sanskrit) potential value has been confirmed by the results from the first-wave deployment areas. To date, the project has delivered more than 7,000 retail sales within the target territories. With successful scaling up of operations, Tata Motors is on track to garner an incremental business growth of roughly 15-20% from its new rural channels."
 		},
 		{
-			'question':"How many people does the government want to see skilled by 2022 as part of the National Skill Development Corporation program?",
-			'option_1':"1 billion",
-			'option_2':"10 million",
-			'option_3':"500 million",
-			'option_4':"150 million",
-			'img_url':"question_images/Level_2_q_2.png",
-			'correct_answer':"1",
-			'q_cnt':['level_2_q_4_a'],
-			'solution':"Accenture helped BSES Delhi reduce malpractices and strengthen its financial footing by reducing operating costs. As a result, from March '05 through to March '06, electricity losses reduced from 40.64% to 35.53% (South and West Delhi) and from 50.12% to 43.88% (Central and East Delhi). "
-		},
-		{
-			'question':"Accenture's Skills to Succeed program designed to help India on its journey to High Performance will help grow businesses because right now...",
+			'question':"Accenture's Skills to Succeed program has enabled India's journey to High Performance,helping businesses to grow right now because...",
 			'option_1':"Only 2% of Indians aged 15-29 have formal vocational training",
-			'option_2':"High employment sectors - BPO, retail,hospitality - are facing a shortfall in terms of employable talent",
-			'option_3':"India's continued economic growth depends on MNC investments ",
+			'option_2':"BPO, retail and hospitality are facing a shortfall in terms of employable talent",
+			'option_3':"India's continued economic growth depends on MNC investments",
 			'option_4':"All of the above",
 			'img_url':"question_images/Level_2_q_4.png",
-			'correct_answer':"1",
+			'correct_answer':"4",
 			'q_cnt':['level_2_q_4_a'],
 			'solution':"The Ace is Tata Motors' highly successful Small Commercial Vehicle. By focusing on customer segmentation, network optimization, pipeline management and sales operations, the project team helped Tata Motors generate approximately $45 million in additional revenue and significantly boost market share in all states - all in less than nine months."
 		}],
@@ -163,7 +167,7 @@ var config ={
 			'option_3':"81%",
 			'option_4':"96%",
 			'img_url':"question_images/Level_3_q_1.png",
-			'correct_answer':"1",
+			'correct_answer':"4",
 			'q_cnt':['level_3_q_1_a','level_3_q_1_b'],
 			'solution':"The Accenture team adopted a three-pronged approach to address the key challenges facing Larsen & Toubro-Mitsubishi Heavy Industries Boilers Private Limited (LMB). The first created a firm framework for business excellence. The second focused on operational excellence through process improvement including risk management, Kaizen, and value engineering. The third enabled LMB to execute the steps needed to take the organization closer to its vision. These initiatives have firmly placed LMB on a trajectory toward high performance while enabling it to derive sustainable, long-term business value."
 		},
@@ -175,7 +179,7 @@ var config ={
 			'option_3':"Three lug nuts on the wheels instead of four",
 			'option_4':"Reducing engine size from 624cc to 500cc",
 			'img_url':"question_images/Level_3_q_2.png",
-			'correct_answer':"1",
+			'correct_answer':"4",
 			'q_cnt':['level_3_q_2_a','level_3_q_2_b'],
 			'solution':"Birla Sun Life needed to improve its recruitment process. Accenture helped them to standardize hiring processes, create an innovative predictive analytics tool to assess business requirements, and develop a mechanism to evaluate and monitor the process. The new streamlined process delivers a 90% fulfillment rate for manager hires and a 50% improvement in retention of new manager hires. By reducing churn and lost revenue opportunities that result from attrition, they significantly improved overall productivity."
 		},
@@ -200,7 +204,7 @@ var config ={
 			'option_3':"2015-2025",
 			'option_4':"2010-2020",
 			'img_url':"question_images/Level_3_q_4.png",
-			'correct_answer':"1",
+			'correct_answer':"4",
 			'q_cnt':['level_3_q_4_a'],
 			'solution':"The Ace is Tata Motors' highly successful Small Commercial Vehicle. By focusing on customer segmentation, network optimization, pipeline management and sales operations, the project team helped Tata Motors generate approximately $45 million in additional revenue and significantly boost market share in all states - all in less than nine months."
 		}
@@ -225,7 +229,7 @@ var config ={
 			'option_3':"Gamers, students, clubbers ",
 			'option_4':"Governments, businesses and communities",
 			'img_url':"question_images/Level_4_q_1.png",
-			'correct_answer':"1",
+			'correct_answer':"4",
 			'q_cnt':['level_4_q_1_a','level_4_q_1_b'],
 			'solution':"In helping VVF transform its HR department Accenture created clear benefits in three areas:-	Recruitment process - With a newly enacted service-level-agreement (SLA) process, hiring cycle time cut in half and joiner ratio rose from 40% to 98%-	Performance management - Established &ldquo;goal cascade&rdquo; workshops and clear linkage between performance and rewards with a variable pay scale-	Talent development - total training man days doubled over a 12 month period with no commensurate increase in training budget"		
 		},
@@ -236,7 +240,7 @@ var config ={
 			'option_3':"Links client, contractor and supply-chain  players to share risks and rewards",
 			'option_4':"Encourages multi-national cooperation",
 			'img_url':"question_images/Level_4_q_2.png",
-			'correct_answer':"1",
+			'correct_answer':"3",
 			'q_cnt':['level_4_q_2_a','level_4_q_2_b'],
 			'solution':"United Spirits turned to Accenture for help in firing its growth. USL's goals were to become the world's largest spirits company by volume, double its turnover, raise it's EBITDA by 50% and align its employees with this vision. It is now the world's largest spirit company by volume, is growing faster than its global competitors, has doubled its turnover and grown earnings at a compound annual growth rate of approximately 30% in the past six years."
 		},
@@ -248,7 +252,7 @@ var config ={
 			'option_3':"Education ",
 			'option_4':"All of the above",
 			'img_url':"question_images/Level_4_q_3.png",
-			'correct_answer':"1",
+			'correct_answer':"4",
 			'q_cnt':['level_4_q_3_a'],
 			'solution':"The Accenture team adopted a three-pronged approach to address the key challenges facing Larsen & Toubro-Mitsubishi Heavy Industries Boilers Private Limited (LMB). The first created a firm framework for business excellence. The second focused on operational excellence through process improvement including risk management, Kaizen, and value engineering. The third enabled LMB to execute the steps needed to take the organization closer to its vision. These initiatives have firmly placed LMB on a trajectory toward high performance while enabling it to derive sustainable, long-term business value."
 		},

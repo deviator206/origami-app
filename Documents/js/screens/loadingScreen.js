@@ -50,6 +50,15 @@ LoadingScreen.prototype.setUp = function()
 	this.mGameAssetLoader.addImage(getAssetPath("img","images/yellow.png"));
 	this.mApplication.imgArray = {};
 	
+	this.mApplication.imgArray['images-intro-screen'] =this.mGameAssetLoader.addImage(getAssetPath("img","images/introduction-screen-element.png"));
+	
+	this.mApplication.imgArray['images-level-1-end-screen'] =this.mGameAssetLoader.addImage(getAssetPath("img","images/Humming-Bird_level-complete.png"));
+this.mApplication.imgArray['images-level-2-end-screen'] =this.mGameAssetLoader.addImage(getAssetPath("img","images/Eagle_level-complete.png"));
+this.mApplication.imgArray['images-level-4-end-screen'] =this.mGameAssetLoader.addImage(getAssetPath("img","images/Weaver-Bird_level-complete.png"));	
+this.mApplication.imgArray['images-level-3-end-screen'] =this.mGameAssetLoader.addImage(getAssetPath("img","images/Albatross_level-complete.png"));
+this.mApplication.imgArray['images-winner-end-screen'] =this.mGameAssetLoader.addImage(getAssetPath("img","images/congratulation-screen.png"));
+	
+	
 	
 	this.mApplication.imgArray['footer_images/level_1_q_1_a'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_1_q_1_a.png"));
 	this.mApplication.imgArray['footer_images/level_1_q_1_a_red'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_1_q_1_a_red.png"));
