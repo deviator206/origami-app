@@ -21,7 +21,7 @@ var config ={
 	level_1_End :
 	{content:'The Hummingbird symbolizes agility with a sensory <br/>supremacy to evaluate the surrounding environment,<br/>thus closely tying it to the Digital Citizen pillar of <br/>a High Performance Nation. Digital Citizens leverage<br/>technology as a "sense" to transact efficiently with <br/>the world at large.  ',
 	topic:'Humming Bird'},
-	level_2_End :{content:'The Eagle stands for the dramatic influence of <br />power through its fastflight supported by a strong <br />build justlike the Empowered People of a High<br/>Performance Nation, who drive India\'s growth <br>with skills that are economically significant, richly <br>diverse and tuned to future leadership opportunities.',
+	level_2_End :{content:'The Eagle stands for the dramatic influence of <br />power through its fastflight supported by a strong <br />build just like the Empowered People of a High<br/>Performance Nation, who drive India\'s growth <br>with skills that are economically significant, richly <br>diverse and tuned to future leadership opportunities.',
 	topic:'Eagle'},
 	level_3_End :{content:'The Baya Weaver, a weaver bird, defies<br/>convention to create intricately woven hanging <br/>nests that protect both itself and the community <br/>from predators,exemplifying innovation that <br/>seeks to address the needs of the masses. <br/>The bird thus represents the Innovation Economy <br/>pillar of the High Performance Nation.',
 	topic:'Albatross'
