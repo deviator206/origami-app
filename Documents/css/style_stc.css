@@ -568,17 +568,26 @@ margin-left: 19px;
 	height: 100px;
 	width: 687px;
 	bottom: 0px;
-	border-top: 2px #CBCCCC solid;
+	/*border-top: 2px #CBCCCC solid;*/
 	position: absolute;
-	/*top: 502px;*/
-	top: 480px;
+	/*top: 502px;
 	left: 50px;
+	*/
+	top: 480px;
+	
 }
-
+.footer_stc_color
+{
+	position: absolute;
+	margin-top: -89px;
+	left: 0px;
+	width: 743px;
+	overflow: hidden;
+}
 .footer_stc img {
-	position: relative;
+	/*position: relative;
 	margin-right: 30px;
-	margin-top: 17px;
+	margin-top: 17px;*/
 }
 
 

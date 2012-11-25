@@ -10,7 +10,21 @@ function GamePlayScreen (app)
 	this.setUp();
 	
 }
+GamePlayScreen.prototype.drawFooterImplementation = function()
+{
+	var arrWIDTH = new Array('0px','0px' , '280px', '502px', '628px', '743px');
+	
+	var sA = "images-footer-level-"+this.mApplication.nLevelCounter;
+	//images-footer-level-2-colored
+	//console.log();
+	//footerImageHolder_Simple
+	//footerImageHolder_Color
+	document.getElementById('footerImageHolder_Simple').appendChild(this.mApplication.imgArray[sA]);
+	document.getElementById('footerImageHolder_Color').appendChild(this.mApplication.imgArray[sA+"-colored"]);
+	document.getElementById('footerImageHolder_Color').style.width = arrWIDTH[this.mApplication.nQuestionIndex];
+	  
 
+}
 GamePlayScreen.prototype.drawFooterImages = function(arr,color)
 {
 	var sCnt ="";
@@ -78,9 +92,14 @@ GamePlayScreen.prototype.setUp = function()
 				sHTMLContent += '</div>';
 		
 				sHTMLContent += '<div id="footerImageHolder_Stc" class="footer_stc">';
+				sHTMLContent += '<div id="footerImageHolder_Simple" >';
+				sHTMLContent += '</div>';
+				sHTMLContent += '<div id="footerImageHolder_Color"  class="footer_stc_color">';
+				sHTMLContent += '</div>';
 				sHTMLContent += '</div>';
 				document.getElementById(this.mDivName).innerHTML =sHTMLContent;
-				for(var i=1;i<5;i++)
+				this.drawFooterImplementation();	
+				/*for(var i=1;i<5;i++)
 				{
 					var objContent_loop  = config['questionSet'+this.mApplication.nLevelCounter];
 					//console.log(' i : '+i);
@@ -93,7 +112,7 @@ GamePlayScreen.prototype.setUp = function()
 					{
 						this.drawFooterImages(objContent_loop[i].q_cnt,'')
 					}
-				}
+				}*/
 				
 	
 	sHTMLContent ="";
