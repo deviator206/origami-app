@@ -361,8 +361,20 @@ textarea[contenteditable] {
 }
 
 .howPlayBtn {
-	margin-left: 150px;
-margin-top: 16px;
+		background-color: #CCCCCC;
+	color: #666;
+	float: left;
+	font-size: 20px;
+	/*font-weight: bold;*/
+	font-weight: normal;
+	height: 43px;
+	line-height: 40px;
+	margin-left: 20px;
+	margin-top: 16px;
+	position: static;
+	text-align: center;
+	width: 100px;
+	cursor: pointer;
 	
 }
 

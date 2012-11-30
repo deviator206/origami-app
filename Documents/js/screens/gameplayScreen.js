@@ -12,7 +12,7 @@ function GamePlayScreen (app)
 }
 GamePlayScreen.prototype.drawFooterImplementation = function()
 {
-	var arrWIDTH = new Array('0px','0px' , '280px', '502px', '628px', '743px');
+	var arrWIDTH = new Array('0px','0px' , '250px', '502px', '628px', '743px');
 	
 	var sA = "images-footer-level-"+this.mApplication.nLevelCounter;
 	//images-footer-level-2-colored

@@ -54,7 +54,7 @@ HowToPlayScreen.prototype.setUp = function()
 			sContent += '</p> ';
             sContent += '<p>';
             	sContent += '<div id= "how_to_play_back_btn" class="backButton">Back</div>';
-                sContent += '<div id= "how_to_play_play_now" class="playButton howPlayBtn">Play now</div>';
+                sContent += '<div id= "how_to_play_play_now" class="howPlayBtn">Play now</div>';
 				
             sContent += '</p>';
             document.getElementById(this.mDivName).innerHTML = sContent; 		

@@ -35,6 +35,8 @@ LoadingScreen.prototype.setUp = function()
 		
 	this.mGameSplashLoader = null;
 	this.mGameAssetLoader  = new PxLoader();
+	
+	console.log(":PX:"+this.mGameAssetLoader);
 	this.mGameAssetLoader.addImage(getAssetPath("img","images/blue.png"));
 	this.mGameAssetLoader.addImage(getAssetPath("img","images/congratsEnd.png"));
 	this.mGameAssetLoader.addImage(getAssetPath("img","images/f1.png"));
