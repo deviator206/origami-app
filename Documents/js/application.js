@@ -2,7 +2,7 @@
  AUTHOR - deviator
  */
 
-ApplicationWrapper.prototype.nextTransition_1 = function() {
+ApplicationWrapper.prototype.nextTransition = function() {
 	switch(this.nGameState) {
 		case 0:
 		/*this.nGameState = 10;
@@ -16,15 +16,21 @@ ApplicationWrapper.prototype.nextTransition_1 = function() {
 			this.nGameState = 30;
 			//INTRODUCTION
 			this.mCurrentScreen = new SplashScreen(this)
+			document.getElementById(this.mCurrentScreen.mDivName).style.opacity =0;
+			$('#' + this.mCurrentScreen.mDivName).fadeTo('fast',1);
 			break;
 		case 30:
 			this.nGameState = 40;
 			this.mCurrentScreen = new HowToPlayScreen(this)
+			document.getElementById(this.mCurrentScreen.mDivName).style.opacity =0;
+			$('#' + this.mCurrentScreen.mDivName).fadeTo('fast',1);
 			break;
 		case 50:
 			//how to play
 			this.nGameState = 51;
 			this.mCurrentScreen = new GameOpeningPage(this)
+			document.getElementById(this.mCurrentScreen.mDivName).style.opacity =0;
+			$('#' + this.mCurrentScreen.mDivName).fadeTo('fast',1);
 			break;
 		case 52:
 			this.nGameState = 60;
@@ -34,6 +40,10 @@ ApplicationWrapper.prototype.nextTransition_1 = function() {
 			//play the game
 			this.nGameState = 80;
 			this.mCurrentScreen = new GamePlayScreen(this)
+			document.getElementById(this.mCurrentScreen.mDivName).style.opacity =0;
+			$('#' + this.mCurrentScreen.mDivName).fadeTo('fast',1);
+			
+			//$('#' + this.mCurrentScreen.mDivName).fadeTo('fast', 1);
 			break;
 		case 90:
 
@@ -42,7 +52,10 @@ ApplicationWrapper.prototype.nextTransition_1 = function() {
 			this.startTheGamePlay();
 			break;
 		case 110:
+		
 			this.mCurrentScreen = new LevelEndScreen(this)
+		document.getElementById(this.mCurrentScreen.mDivName).style.opacity =0;
+			$('#' + this.mCurrentScreen.mDivName).fadeTo('fast',1);
 
 			break;
 		case 120:
@@ -52,7 +65,10 @@ ApplicationWrapper.prototype.nextTransition_1 = function() {
 			this.startTheGamePlay();
 			break;
 		case 130:
+		
 			this.mCurrentScreen = new WinnerScreen(this)
+		document.getElementById(this.mCurrentScreen.mDivName).style.opacity =0;
+			$('#' + this.mCurrentScreen.mDivName).fadeTo('fast',1);
 			break;
 		case 140:
 			this.nQuestionIndex = 0;
@@ -63,23 +79,14 @@ ApplicationWrapper.prototype.nextTransition_1 = function() {
 	}
 }
 
-ApplicationWrapper.prototype.nextTransition = function() {
-	if (this.mCurrentScreen != null) {
-		var that = this;
-		$('#' + this.mCurrentScreen.mDivName).fadeTo('slow', 0.1, function() {
-			// Animation complete.
-			that.nextTransition_1();
-		});
-	} else {
-		this.nextTransition_1();
-	}
-}
+
 
 ApplicationWrapper.prototype.startTheGamePlay = function() {
 
 	if (this.nQuestionIndex < this.arrLevelTotalQuestion[this.nLevelCounter]) {
 		this.nQuestionIndex++;
 		this.nGameState = 70;
+		console.log(" NEXT TRAN:[ startTheGamePlay ]");
 		this.nextTransition();
 
 	} else {
@@ -89,6 +96,7 @@ ApplicationWrapper.prototype.startTheGamePlay = function() {
 		if (this.nLevelCounter <= this.arrLevelTotalQuestion.length - 1) {
 
 			this.nGameState = 110;
+			console.log(" NEXT TRAN:[ startTheGamePlay2 ]");
 			this.nextTransition();
 			//this.nLevelCounter++;
 			//this.nQuestionIndex =0;
@@ -96,6 +104,7 @@ ApplicationWrapper.prototype.startTheGamePlay = function() {
 
 		} else {
 			this.nGameState = 110;
+			console.log(" NEXT TRAN:[ startTheGamePlay3 ]");
 			this.nextTransition();
 
 		}
@@ -125,6 +134,7 @@ ApplicationWrapper.prototype.startGameTimer = function(i) {
 		if (that.nQuizTimeCntr <= 0) {
 			clearInterval(that.nQuizTimer)
 			that.nGameState = 130;
+			console.log(" NEXT TRAN:[ startTheGamePlay56 ]");
 			that.nextTransition()
 		}
 		document.getElementById('timer_txt').innerHTML = '' + that.nQuizTimeCntr;
@@ -139,6 +149,7 @@ ApplicationWrapper.prototype.answerSelected = function(nSelected) {
 	if (nSelected == objContent[this.nQuestionIndex].correct_answer) {
 		this.nQuizScore = this.nQuizScore + this.nCorrectAnswer
 		this.nGameState = 100;
+		console.log(" NEXT TRAN:[ startTheGamePlay fds]");
 		this.nextTransition();
 	} else {
 		this.nGameState = 70;
@@ -160,7 +171,7 @@ ApplicationWrapper.prototype.showScreen = function(sDivName) {
 			document.getElementById(this.mScreenManager[nIndex]).style.display = "none";
 		} else {
 			document.getElementById(this.mScreenManager[nIndex]).style.display = "block";
-			document.getElementById(this.mScreenManager[nIndex]).style.opacity = "1";
+			//document.getElementById(this.mScreenManager[nIndex]).style.opacity = "1";
 		}
 	}
 }
@@ -193,7 +204,7 @@ function ApplicationWrapper() {
 	this.arrQuestion = null;
 	DOMWrapper = this;
 	this.imgArray = {}
-	this.jsAnimManager = new jsAnimManager(40);
+	this.jsAnimManager = new jsAnimManager(10);
 	return this;
 }
 

@@ -206,6 +206,7 @@ textarea[contenteditable] {
 	width: 875px;
        height: 569px;
        border: #CBCCCC solid 13px;
+       
 }
 
 .hummingCloseButton {
@@ -358,6 +359,60 @@ textarea[contenteditable] {
 .backButton:hover {
 	background-color: #666;
 	color: #FFF;
+}
+
+.anim_play_now{
+background-color: #CCC;
+color: #666;
+float: left;
+font-size: 20px;
+font-weight: normal;
+height: 43px;
+line-height: 40px;
+right:400px;
+padding: 15px;
+padding-top: 0px;
+padding-bottom: 0px;
+position: relative;
+text-align: center;
+width: 130px;
+cursor: pointer;
+top: 210px;
+opacity: 0;
+}
+
+.anim_play_now:hover
+{
+	color:#FFFFFF;
+	background-color:#666;
+}
+
+
+.anim_how_to_play:hover
+{
+	color:#FFFFFF;
+	background-color:#666;
+}
+.anim_how_to_play
+{
+	background-color: #CCC;
+color: #666;
+float: left;
+font-size: 20px;
+font-weight: normal;
+height: 43px;
+line-height: 40px;
+right: 240px;
+position: relative;
+text-align: center;
+width: 130px;
+cursor: pointer;
+padding: 15px;
+padding-top: 0px;
+padding-bottom: 0px;
+top: 150px;
+opacity: 0;
+
 }
 
 .howPlayBtn {
@@ -783,4 +838,41 @@ width: 352px;
 position: absolute;
 margin-top: -265px;
 margin-left: 33px
+}
+
+
+.bird_anim
+{
+	height: "100px";
+	width: "auto";
+	display: none;
+}
+
+.bird_peacock_anim
+{
+	display: none;
+}
+
+#new_intro_Anim
+{
+	display: block;
+opacity: 1;
+overflow: hidden;
+width: 800px;
+
+position: absolute;
+height: 95%;
+width: 95%;
+}
+
+
+.anim_content
+{
+	width: 600px;
+right: 242px;
+position: relative;
+font-size: 32px;
+
+opacity: 0;
+bottom: 90px;
 }

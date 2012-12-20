@@ -211,7 +211,7 @@ GamePlayScreen.prototype.showQuestionOverlay = function()
 		document.getElementById('opaqueScreen_ForQuestion').style.display ="block";
 		
 		
-		document.getElementById('clickQuestionTryAgain').onclick = function()
+		document.getElementById('overlayScreen_ForQuestion').onclick = function()
 		{
 			closeQuestionOverlay();
 		}

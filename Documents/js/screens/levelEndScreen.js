@@ -156,7 +156,7 @@ function closeOverlay()
 	function showOverlay()
 	{
 		//console.log("SHOW "+document.getElementById('opaqueScreen').innerHTML)
-		if(document.getElementById('opaqueScreen').innerHTML == '-1')
+		//if(document.getElementById('opaqueScreen').innerHTML == '-1')
 		{
 			var sT = getAssetPath("img","images/close-image.png");
 			var sContent = '<img src="'+sT+'" height="100%" />'
