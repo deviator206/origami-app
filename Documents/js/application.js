@@ -23,6 +23,10 @@ ApplicationWrapper.prototype.nextTransition = function() {
 			break;
 		case 50:
 			//how to play
+			this.nGameState = 51;
+			this.mCurrentScreen = new GameOpeningPage(this)
+			break;
+		case 52:
 			this.nGameState = 60;
 			this.startTheGamePlay()
 			break;
@@ -68,9 +72,9 @@ ApplicationWrapper.prototype.startTheGamePlay = function() {
 
 	} else {
 		// next level to be shown
-		console.log(' : : ' + this.nLevelCounter + " :v/s:" + this.arrLevelTotalQuestion.length);
+		//console.log(' : : ' + this.nLevelCounter + " :v/s:" + this.arrLevelTotalQuestion.length);
 
-		if (this.nLevelCounter <= this.arrLevelTotalQuestion.length - 2) {
+		if (this.nLevelCounter <= this.arrLevelTotalQuestion.length - 1) {
 
 			this.nGameState = 110;
 			this.nextTransition();
@@ -79,7 +83,7 @@ ApplicationWrapper.prototype.startTheGamePlay = function() {
 			//this.startTheGamePlay();
 
 		} else {
-			this.nGameState = 130;
+			this.nGameState = 110;
 			this.nextTransition();
 
 		}
@@ -119,16 +123,18 @@ ApplicationWrapper.prototype.startGameTimer = function(i) {
 
 ApplicationWrapper.prototype.answerSelected = function(nSelected) {
 
-	var objContent  = config['questionSet'+this.nLevelCounter];
+	var objContent = config['questionSet' + this.nLevelCounter];
 	if (nSelected == objContent[this.nQuestionIndex].correct_answer) {
 		this.nQuizScore = this.nQuizScore + this.nCorrectAnswer
 		this.nGameState = 100;
-
+		this.nextTransition();
 	} else {
-		this.nGameState = 100;
-	}
+		this.nGameState = 70;
+		this.mCurrentScreen.showQuestionOverlay();
+		//this.nGameState = 100;
+		//this.nextTransition();
 
-	this.nextTransition();
+	}
 
 }
 ApplicationWrapper.prototype.showSelectedScreen = function(sDivName) {
@@ -150,6 +156,7 @@ ApplicationWrapper.prototype.setUp = function(config) {
 	this.mScreenManager = config.screenNames;
 
 }
+var DOMWrapper = null;
 function ApplicationWrapper() {
 	// track game state
 	this.nGameState = 0;
@@ -158,10 +165,9 @@ function ApplicationWrapper() {
 
 	this.nLevelCounter = 1;
 	this.arrLevelTotalQuestion = new Array(0, 4, 4, 4, 4)
-	
-	this.arrLevel_Grey = new Array('level_1_q_1_a','level_1_q_1_b','level_1_q_2_a','level_1_q_2_b','level_1_q_3_a','level_1_q_4_a');
-	
-	
+
+	this.arrLevel_Grey = new Array('level_1_q_1_a', 'level_1_q_1_b', 'level_1_q_2_a', 'level_1_q_2_b', 'level_1_q_3_a', 'level_1_q_4_a');
+
 	//game-logic-params
 	this.nQuestionIndex = 0;
 	this.nQuizTimer = 0;
@@ -172,6 +178,8 @@ function ApplicationWrapper() {
 	this.nBenchmarkScore = 100;
 	this.bcarouselCreated = false;
 	this.arrQuestion = null;
+	DOMWrapper = this;
+	this.imgArray = {}
 	return this;
 }
 

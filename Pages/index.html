@@ -25,17 +25,17 @@
 					case "img":
 						//console.log(' STR ' + str);
 						str = str.replace("img/", "");
-						sTemp += "" + imagesPath+"origami/"
+						sTemp += "" + imagesPath + "origami/"
 						break;
 				}
 				sTemp += "" + str;
 				return sTemp;
 			}
 
-			//var arrScriptTags = new Array('css/style.css', 'js/lib/PxLoader.js', 'js/lib/PxLoaderImage.js', 'js/model.js', 'js/screens/loadingScreen.js', 'js/screens/splashScreen.js', 'js/screens/howtoplayScreen.js', 'js/screens/gameplayScreen.js', 'js/screens/levelEndScreen.js', 'js/screens/winnerScreen.js', 'js/application.js');
-			var arrScriptTags = new Array('css/style.css', 'js/app.js');
+			//var arrScriptTags = new Array('css/style_stc.css', 'js/lib/PxLoader.js', 'js/lib/PxLoaderImage.js', 'js/model.js', 'js/screens/loadingScreen.js', 'js/screens/splashScreen.js', 'js/screens/howtoplayScreen.js', 'js/screens/gameplayScreen.js', 'js/screens/levelEndScreen.js', 'js/screens/winnerScreen.js', 'js/application.js');
+			var arrScriptTags = new Array('css/style_stc.css', 'js/app.js');
 			var arrScriptIndex = 0;
-			var arrDivNames = new Array('loading_script_tags', 'loadingScreen', 'splashScreen', 'howtoplayScreen', 'questionScreen', 'sidePanel', 'levelEndScreen', 'winnerScreen', 'overlayScreen')
+			var arrDivNames = new Array('loading_script_tags', 'loadingScreen', 'splashScreen', 'howtoplayScreen','new_intro_Anim' ,'questionScreen', 'sidePanel', 'levelEndScreen', 'winnerScreen', 'overlayScreen', 'overlayScreen_ForQuestion')
 			function makeAllInvisible() {
 				for (var i = 0; i < arrDivNames.length; i++)
 					document.getElementById(arrDivNames[i]).style.display = 'none'
@@ -50,12 +50,14 @@
 
 				if (arrScriptIndex < arrScriptTags.length) {
 					if (arrScriptIndex < 1) {
-						AddCSS(getAssetPath("docs", arrScriptTags[arrScriptIndex]), startLoadingAssets);
+						AddCSS(getAssetPath("docs", arrScriptTags[arrScriptIndex]));
+						arrScriptIndex++;
+						startLoadingAssets();
 					} else {
 						AddScript(getAssetPath("docs", arrScriptTags[arrScriptIndex]), startLoadingAssets);
+						arrScriptIndex++;
 					}
 
-					arrScriptIndex++;
 				} else {
 					document.getElementById('appContainer').style.display = "block"
 					document.getElementById('loading_script_tags').style.display = "none"
@@ -149,9 +151,10 @@
 					</div>
 
 					<div id="appContainer">
-						<div id="loadingScreen" style="display: block;margin-left: 200px;margin-top: 200px;"></div>
+						<div id="loadingScreen" style="display: block;margin-left: 240px;margin-top: 200px;"></div>
 						<div id="splashScreen"></div>
 						<div id="howtoplayScreen"></div>
+						<div id="new_intro_Anim"></div>
 						<div id="questionScreen"></div>
 						<div id="levelEndScreen"></div>
 						<div id="winnerScreen"></div>
@@ -161,9 +164,20 @@
 				</div>
 				<div id="sidePanel"></div>
 				<div id="overlayScreen" class="overlayScreenCSS">
-				<div id="opaqueScreen" class="opaqueScreenCSS">-1</div>
-				<div class="closeOverlay" onClick="javascript:closeOverlay();"></div>
-			</div>
+					<div id="opaqueScreen_bg" class="opaqueScreenCSS"></div>
+					<div id="opaqueScreen" class="opaqueScreenCSS_1">
+						-1
+					</div>
+					<div id="clickOverlayClose" class="closeOverlay" ></div>
+				</div>
+				<div id="overlayScreen_ForQuestion" class="overlayScreenCSS_ForQuestion">
+					<div id="opaqueScreen_ForQuestion" class="opaqueScreenCSS_ForQuestion">
+						Please try again...
+					</div>
+					<div id="clickQuestionTryAgain" class="closeOverlay_ForQuestion">
+						Close X
+					</div>
+				</div>
 			</div>
 
 		</div>
