@@ -2,7 +2,7 @@
  AUTHOR - deviator
  */
 
-ApplicationWrapper.prototype.nextTransition = function() {
+ApplicationWrapper.prototype.nextTransition_1 = function() {
 	switch(this.nGameState) {
 		case 0:
 		/*this.nGameState = 10;
@@ -60,6 +60,18 @@ ApplicationWrapper.prototype.nextTransition = function() {
 			this.nGameState = 60;
 			this.startTheGamePlay()
 			break;
+	}
+}
+
+ApplicationWrapper.prototype.nextTransition = function() {
+	if (this.mCurrentScreen != null) {
+		var that = this;
+		$('#' + this.mCurrentScreen.mDivName).fadeTo('slow', 0.1, function() {
+			// Animation complete.
+			that.nextTransition_1();
+		});
+	} else {
+		this.nextTransition_1();
 	}
 }
 
@@ -148,6 +160,7 @@ ApplicationWrapper.prototype.showScreen = function(sDivName) {
 			document.getElementById(this.mScreenManager[nIndex]).style.display = "none";
 		} else {
 			document.getElementById(this.mScreenManager[nIndex]).style.display = "block";
+			document.getElementById(this.mScreenManager[nIndex]).style.opacity = "1";
 		}
 	}
 }
@@ -180,7 +193,7 @@ function ApplicationWrapper() {
 	this.arrQuestion = null;
 	DOMWrapper = this;
 	this.imgArray = {}
-	this.jsAnimManager = new jsAnimManager(40); 
+	this.jsAnimManager = new jsAnimManager(40);
 	return this;
 }
 

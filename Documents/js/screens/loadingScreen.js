@@ -13,6 +13,7 @@ function LoadingScreen(app) {
 LoadingScreen.prototype.setUp = function() {
 
 	this.mApplication.showScreen(this.mDivName)
+	
 	var sT = getAssetPath("img", "splash/whiteProgBar.png")
 	for (var i = 0; i < 25; i++) {
 		var divToAppend = document.createElement('div');
