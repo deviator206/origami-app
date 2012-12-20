@@ -35,6 +35,8 @@ LoadingScreen.prototype.setUp = function()
 		
 	this.mGameSplashLoader = null;
 	this.mGameAssetLoader  = new PxLoader();
+	
+	console.log(":PX:"+this.mGameAssetLoader);
 	this.mGameAssetLoader.addImage(getAssetPath("img","images/blue.png"));
 	this.mGameAssetLoader.addImage(getAssetPath("img","images/congratsEnd.png"));
 	this.mGameAssetLoader.addImage(getAssetPath("img","images/f1.png"));
@@ -48,41 +50,133 @@ LoadingScreen.prototype.setUp = function()
 	this.mGameAssetLoader.addImage(getAssetPath("img","images/Q1_image.png"));
 	this.mGameAssetLoader.addImage(getAssetPath("img","images/red.png"));
 	this.mGameAssetLoader.addImage(getAssetPath("img","images/yellow.png"));
+	this.mApplication.imgArray = {};
 	
-	this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_1_q_1_a.png"));
-	this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_1_q_1_a_red.png"));
-	this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_1_q_1_b.png"));
-	this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_1_q_1_b_red.png"));
-	this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_1_q_2_a.png"));
-	this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_1_q_2_a_red.png"));
-	this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_1_q_2_b.png"));
-	this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_1_q_2_b_red.png"));
-	this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_1_q_3_a.png"));
-	this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_1_q_3_a_red.png"));
-	this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_1_q_4_a.png"));
+	this.mApplication.imgArray['images-intro-screen'] =this.mGameAssetLoader.addImage(getAssetPath("img","images/introduction-screen-element.png"));
 	
-	this.mGameAssetLoader.addImage(getAssetPath("img","levelend_images/Level_1.png"));
+	this.mApplication.imgArray['images-level-1-end-screen'] =this.mGameAssetLoader.addImage(getAssetPath("img","images/Humming-Bird_level-complete.png"));
+this.mApplication.imgArray['images-level-2-end-screen'] =this.mGameAssetLoader.addImage(getAssetPath("img","images/Eagle_level-complete.png"));
+this.mApplication.imgArray['images-level-4-end-screen'] =this.mGameAssetLoader.addImage(getAssetPath("img","images/Weaver-Bird_level-complete.png"));	
+this.mApplication.imgArray['images-level-3-end-screen'] =this.mGameAssetLoader.addImage(getAssetPath("img","images/Albatross_level-complete.png"));
+this.mApplication.imgArray['images-winner-end-screen'] =this.mGameAssetLoader.addImage(getAssetPath("img","images/congratulation-screen.png"));
+
+
+this.mApplication.imgArray['images-footer-level-1'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level1_footer.png"));
+this.mApplication.imgArray['images-footer-level-1-colored'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level1_footer_colored.png"));
+
+this.mApplication.imgArray['images-footer-level-2'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level2_footer.png"));
+this.mApplication.imgArray['images-footer-level-2-colored'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level2_footer_colored.png"));
+
+this.mApplication.imgArray['images-footer-level-3'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level3_footer.png"));
+this.mApplication.imgArray['images-footer-level-3-colored'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level3_footer_colored.png"));
+
+
+this.mApplication.imgArray['images-footer-level-4'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level4_footer.png"));
+this.mApplication.imgArray['images-footer-level-4-colored'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level4_footer_colored.png"));
+
+	/*
+	this.mApplication.imgArray['footer_images/level_1_q_1_a'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_1_q_1_a.png"));
+	this.mApplication.imgArray['footer_images/level_1_q_1_a_red'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_1_q_1_a_red.png"));
+	this.mApplication.imgArray['footer_images/level_1_q_1_b'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_1_q_1_b.png"));
+	this.mApplication.imgArray['footer_images/level_1_q_1_b_red'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_1_q_1_b_red.png"));
+	this.mApplication.imgArray['footer_images/level_1_q_2_a'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_1_q_2_a.png"));
+	this.mApplication.imgArray['footer_images/level_1_q_2_a_red'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_1_q_2_a_red.png"));
+	this.mApplication.imgArray['footer_images/level_1_q_2_b'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_1_q_2_b.png"));
+	this.mApplication.imgArray['footer_images/level_1_q_2_b_red'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_1_q_2_b_red.png"));
+	this.mApplication.imgArray['footer_images/level_1_q_3_a'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_1_q_3_a.png"));
+	this.mApplication.imgArray['footer_images/level_1_q_3_a_red'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_1_q_3_a_red.png"));
+	this.mApplication.imgArray['footer_images/level_1_q_4_a'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_1_q_4_a.png"));
+	
+	
+	this.mApplication.imgArray['footer_images/level_2_q_1_a'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_2_q_1_a.png"));
+	this.mApplication.imgArray['footer_images/level_2_q_1_a_red'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_2_q_1_a_red.png"));
+	this.mApplication.imgArray['footer_images/level_2_q_1_b'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_2_q_1_b.png"));
+	this.mApplication.imgArray['footer_images/level_2_q_1_b_red'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_2_q_1_b_red.png"));
+	this.mApplication.imgArray['footer_images/level_2_q_2_a'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_2_q_2_a.png"));
+	this.mApplication.imgArray['footer_images/level_2_q_2_a_red'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_2_q_2_a_red.png"));
+	this.mApplication.imgArray['footer_images/level_2_q_2_b'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_2_q_2_b.png"));
+	this.mApplication.imgArray['footer_images/level_2_q_2_b_red'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_2_q_2_b_red.png"));
+	this.mApplication.imgArray['footer_images/level_2_q_3_a'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_2_q_3_a.png"));
+	this.mApplication.imgArray['footer_images/level_2_q_3_a_red'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_2_q_3_a_red.png"));
+	this.mApplication.imgArray['footer_images/level_2_q_4_a'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_2_q_4_a.png"));
+	
+	
+	this.mApplication.imgArray['footer_images/level_3_q_1_a'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_3_q_1_a.png"));
+	this.mApplication.imgArray['footer_images/level_3_q_1_a_red'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_3_q_1_a_red.png"));
+	this.mApplication.imgArray['footer_images/level_3_q_1_b'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_3_q_1_b.png"));
+	this.mApplication.imgArray['footer_images/level_3_q_1_b_red'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_3_q_1_b_red.png"));
+	this.mApplication.imgArray['footer_images/level_3_q_2_a'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_3_q_2_a.png"));
+	this.mApplication.imgArray['footer_images/level_3_q_2_a_red'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_3_q_2_a_red.png"));
+	this.mApplication.imgArray['footer_images/level_3_q_2_b'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_3_q_2_b.png"));
+	this.mApplication.imgArray['footer_images/level_3_q_2_b_red'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_3_q_2_b_red.png"));
+	this.mApplication.imgArray['footer_images/level_3_q_3_a'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_3_q_3_a.png"));
+	this.mApplication.imgArray['footer_images/level_3_q_3_a_red'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_3_q_3_a_red.png"));
+	this.mApplication.imgArray['footer_images/level_3_q_4_a'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_3_q_4_a.png"));
+	
+	
+	this.mApplication.imgArray['footer_images/level_4_q_1_a'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_4_q_1_a.png"));
+	this.mApplication.imgArray['footer_images/level_4_q_1_a_red'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_4_q_1_a_red.png"));
+	this.mApplication.imgArray['footer_images/level_4_q_1_b'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_4_q_1_b.png"));
+	this.mApplication.imgArray['footer_images/level_4_q_1_b_red'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_4_q_1_b_red.png"));
+	this.mApplication.imgArray['footer_images/level_4_q_2_a'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_4_q_2_a.png"));
+	this.mApplication.imgArray['footer_images/level_4_q_2_a_red'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_4_q_2_a_red.png"));
+	this.mApplication.imgArray['footer_images/level_4_q_2_b'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_4_q_2_b.png"));
+	this.mApplication.imgArray['footer_images/level_4_q_2_b_red'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_4_q_2_b_red.png"));
+	this.mApplication.imgArray['footer_images/level_4_q_3_a'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_4_q_3_a.png"));
+	this.mApplication.imgArray['footer_images/level_4_q_3_a_red'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_4_q_3_a_red.png"));
+	this.mApplication.imgArray['footer_images/level_4_q_4_a'] =this.mGameAssetLoader.addImage(getAssetPath("img","footer_images/level_4_q_4_a.png"));*/
+	
+	 this.mGameAssetLoader.addImage(getAssetPath("img","levelend_images/Level_1.png"));
+	this.mGameAssetLoader.addImage(getAssetPath("img","levelend_images/Level_2.png"));
+	this.mGameAssetLoader.addImage(getAssetPath("img","levelend_images/Level_3.png"));
+	this.mGameAssetLoader.addImage(getAssetPath("img","levelend_images/Level_4.png"));
+	
 	
 	this.mGameAssetLoader.addImage(getAssetPath("img","question_images/Level_1_q_1.png"));
 	this.mGameAssetLoader.addImage(getAssetPath("img","question_images/Level_1_q_2.png"));
 	this.mGameAssetLoader.addImage(getAssetPath("img","question_images/Level_1_q_3.png"));
 	this.mGameAssetLoader.addImage(getAssetPath("img","question_images/Level_1_q_4.png"));
 	
+	this.mGameAssetLoader.addImage(getAssetPath("img","question_images/Level_2_q_1.png"));
+	this.mGameAssetLoader.addImage(getAssetPath("img","question_images/Level_2_q_2.png"));
+	this.mGameAssetLoader.addImage(getAssetPath("img","question_images/Level_2_q_3.png"));
+	this.mGameAssetLoader.addImage(getAssetPath("img","question_images/Level_2_q_4.png"));
 	
-	this.mGameAssetLoader.addImage(getAssetPath("img","sidepanel_images/level_1_image1.png"));
-	this.mGameAssetLoader.addImage(getAssetPath("img","sidepanel_images/level_1_image2.png"));
-	this.mGameAssetLoader.addImage(getAssetPath("img","sidepanel_images/level_1_image3.png"));
-	this.mGameAssetLoader.addImage(getAssetPath("img","sidepanel_images/level_1_image4.png"));
-	this.mGameAssetLoader.addImage(getAssetPath("img","sidepanel_images/level_1_image5.png"));
+	this.mGameAssetLoader.addImage(getAssetPath("img","question_images/Level_3_q_1.png"));
+	this.mGameAssetLoader.addImage(getAssetPath("img","question_images/Level_3_q_2.png"));
+	this.mGameAssetLoader.addImage(getAssetPath("img","question_images/Level_3_q_3.png"));
+	this.mGameAssetLoader.addImage(getAssetPath("img","question_images/Level_3_q_4.png"));
 	
-	this.mGameAssetLoader.addImage(getAssetPath("img","sidepanel_images/level_2_image4.png"));
-	this.mGameAssetLoader.addImage(getAssetPath("img","sidepanel_images/level_2_image5.png"));
+	this.mGameAssetLoader.addImage(getAssetPath("img","question_images/Level_4_q_1.png"));
+	this.mGameAssetLoader.addImage(getAssetPath("img","question_images/Level_4_q_2.png"));
+	this.mGameAssetLoader.addImage(getAssetPath("img","question_images/Level_4_q_3.png"));
+	this.mGameAssetLoader.addImage(getAssetPath("img","question_images/Level_4_q_4.png"));
 	
-	this.mGameAssetLoader.addImage(getAssetPath("img","sidepanel_images/level_3_image4.png"));
-	this.mGameAssetLoader.addImage(getAssetPath("img","sidepanel_images/level_3_image5.png"));
 	
-	this.mGameAssetLoader.addImage(getAssetPath("img","sidepanel_images/level_4_image4.png"));
-	this.mGameAssetLoader.addImage(getAssetPath("img","sidepanel_images/level_4_image5.png"));
+	this.mApplication.imgArray['level_1_image1'] =  this.mGameAssetLoader.addImage(getAssetPath("img","sidepanel_images/level_1_image1.png"));
+	this.mApplication.imgArray['level_1_image2'] =this.mGameAssetLoader.addImage(getAssetPath("img","sidepanel_images/level_1_image2.png"));
+	this.mApplication.imgArray['level_1_image3'] =this.mGameAssetLoader.addImage(getAssetPath("img","sidepanel_images/level_1_image3.png"));
+	this.mApplication.imgArray['level_1_image4'] =this.mGameAssetLoader.addImage(getAssetPath("img","sidepanel_images/level_1_image4.png"));
+	this.mApplication.imgArray['level_1_image5'] =this.mGameAssetLoader.addImage(getAssetPath("img","sidepanel_images/level_1_image5.png"));
+	
+	this.mApplication.imgArray['level_2_image1'] =this.mGameAssetLoader.addImage(getAssetPath("img","sidepanel_images/level_2_image1.png"));
+	this.mApplication.imgArray['level_2_image2'] =this.mGameAssetLoader.addImage(getAssetPath("img","sidepanel_images/level_2_image2.png"));
+	this.mApplication.imgArray['level_2_image3'] =this.mGameAssetLoader.addImage(getAssetPath("img","sidepanel_images/level_2_image3.png"));
+	this.mApplication.imgArray['level_2_image4'] =this.mGameAssetLoader.addImage(getAssetPath("img","sidepanel_images/level_2_image4.png"));
+	this.mApplication.imgArray['level_2_image5'] =this.mGameAssetLoader.addImage(getAssetPath("img","sidepanel_images/level_2_image5.png"));
+	
+	this.mApplication.imgArray['level_3_image1'] =this.mGameAssetLoader.addImage(getAssetPath("img","sidepanel_images/level_3_image1.png"));
+	this.mApplication.imgArray['level_3_image2'] =this.mGameAssetLoader.addImage(getAssetPath("img","sidepanel_images/level_3_image2.png"));
+	this.mApplication.imgArray['level_3_image3'] =this.mGameAssetLoader.addImage(getAssetPath("img","sidepanel_images/level_3_image3.png"));
+	this.mApplication.imgArray['level_3_image4'] =this.mGameAssetLoader.addImage(getAssetPath("img","sidepanel_images/level_3_image4.png"));
+	this.mApplication.imgArray['level_3_image5'] =this.mGameAssetLoader.addImage(getAssetPath("img","sidepanel_images/level_3_image5.png"));
+	
+	
+	this.mApplication.imgArray['level_4_image1'] =this.mGameAssetLoader.addImage(getAssetPath("img","sidepanel_images/level_4_image1.png"));
+this.mApplication.imgArray['level_4_image2'] =	this.mGameAssetLoader.addImage(getAssetPath("img","sidepanel_images/level_4_image2.png"));
+	this.mApplication.imgArray['level_4_image3'] =this.mGameAssetLoader.addImage(getAssetPath("img","sidepanel_images/level_4_image3.png"));
+	this.mApplication.imgArray['level_4_image4'] =this.mGameAssetLoader.addImage(getAssetPath("img","sidepanel_images/level_4_image4.png"));
+	this.mApplication.imgArray['level_4_image5'] =this.mGameAssetLoader.addImage(getAssetPath("img","sidepanel_images/level_4_image5.png"));
 	
 	var thatObject = this;
 	this.mGameAssetLoader.addProgressListener(function(e){thatObject.gameAssetLoadingProgress(e);});
