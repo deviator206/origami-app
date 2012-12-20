@@ -180,6 +180,7 @@ function ApplicationWrapper() {
 	this.arrQuestion = null;
 	DOMWrapper = this;
 	this.imgArray = {}
+	this.jsAnimManager = new jsAnimManager(40); 
 	return this;
 }
 

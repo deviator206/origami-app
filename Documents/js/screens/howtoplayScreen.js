@@ -69,7 +69,7 @@ HowToPlayScreen.prototype.setUp = function()
 	
 	document.getElementById('how_to_play_play_now').onclick= function()
 	{
-		that.mApplication.setGameState(50);
+		that.mApplication.setGameState(52);
 		that.mApplication.nextTransition();
 	};
 	
