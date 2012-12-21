@@ -28,7 +28,7 @@ GameOpeningPage.prototype.animatePeacock = function() {
 	that.arrAnimObject[that.animCounter].add({
 		property : Prop.position,
 		to : new Pos(300, 350),
-		duration : 500,
+		duration : 1000,
 		onComplete : function() {
 			console.log(" FINAL ");
 			$('#anim_content_text').fadeTo('slow', 1);
@@ -43,87 +43,44 @@ GameOpeningPage.prototype.setUp = function() {
 	var that = this;
 	this.mApplication.showScreen(this.mDivName);
 	document.getElementById(this.mDivName).innerHTML == ""
-	
-		var sContent = "";
-		sContent += '<div id= "bird_1" class="bird_anim" ></div>';
-		sContent += '<div id= "bird_2" class="bird_anim"></div>';
-		sContent += '<div id= "bird_3" class="bird_anim"></div>';
-		sContent += '<div id= "bird_4" class="bird_anim"></div>';
-		sContent += '<div id= "main_P" class="bird_peacock_anim"> '
-		sContent += '<div id= "anim_content_text" class="anim_content"><span style="color: #A0B3D3;">INDIA:</span><span  style="  color: orange; font-weight: bold;" >&nbsp;A FLIGHT OF IDEAS</span></div>';
-		sContent += '<div id= "how_to_play_back_btn_1" class="anim_how_to_play">How to Play</div>';
-		sContent += '<div id= "how_to_play_play_now_1" class="anim_play_now">Play the game</div>';
-		sContent += '</div>';
-		
 
-		document.getElementById(this.mDivName).innerHTML = sContent;
-		document.getElementById('bird_1').appendChild(this.mApplication.imgArray['level_Anim_image1']);
-		document.getElementById('bird_2').appendChild(this.mApplication.imgArray['level_Anim_image2']);
-		document.getElementById('bird_3').appendChild(this.mApplication.imgArray['level_Anim_image3']);
-		document.getElementById('bird_4').appendChild(this.mApplication.imgArray['level_Anim_image4']);
+	var sContent = "";
+	sContent += '<div id= "birds_animation" ></div>';
+	//sContent += '<div id= "bird_1" class="bird_anim" ></div>';
+	//sContent += '<div id= "bird_2" class="bird_anim"></div>';
+	//sContent += '<div id= "bird_3" class="bird_anim"></div>';
+	//sContent += '<div id= "bird_4" class="bird_anim"></div>';
+	sContent += '<div id= "main_P" class="bird_peacock_anim"> '
+	sContent += '<div id= "anim_content_text" class="anim_content"><span style="color: #A0B3D3;">INDIA:</span><span  style="  color: orange; font-weight: bold;" >&nbsp;A FLIGHT OF IDEAS</span></div>';
+	sContent += '<div id= "how_to_play_back_btn_1" class="anim_how_to_play">How to Play</div>';
+	sContent += '<div id= "how_to_play_play_now_1" class="anim_play_now">Play the game</div>';
+	sContent += '</div>';
 
-		document.getElementById('main_P').appendChild(this.mApplication.imgArray['images_congratsEnd']);
-
-	
+	document.getElementById(this.mDivName).innerHTML = sContent;
+	/*	document.getElementById('bird_1').appendChild(this.mApplication.imgArray['level_Anim_image1']);
+	 document.getElementById('bird_2').appendChild(this.mApplication.imgArray['level_Anim_image2']);
+	 document.getElementById('bird_3').appendChild(this.mApplication.imgArray['level_Anim_image3']);
+	 document.getElementById('bird_4').appendChild(this.mApplication.imgArray['level_Anim_image4']);
+	 */
+	document.getElementById('main_P').appendChild(this.mApplication.imgArray['images_congratsEnd']);
 
 	this.timerObject = setInterval(function() {
-		if (that.animCounter != 5) {
-			that.arrAnim[that.animCounter] = document.getElementById("bird_" + that.animCounter);
-			 document.getElementById("bird_" + that.animCounter).style.display = "block";
-			that.mApplication.jsAnimManager.registerPosition("bird_" + that.animCounter);
-			that.arrAnim[that.animCounter].setPosition(-400, 900);
-			that.arrAnimObject[that.animCounter] = that.mApplication.jsAnimManager.createAnimObject("bird_" + that.animCounter);
-
-			that.arrAnimObject[that.animCounter].add({
-				property : Prop.positionSemicircle(true),
-				to : new Pos(1000, 900),
-				duration : 2000,
-				onComplete : function() {
-					this.obj.style.zIndex = 0;
-					that.bird_anim_complete++;
-					console.log(" that.bird_anim_complete :: " + that.bird_anim_complete);
-					if (that.bird_anim_complete == 5) {
-						that.animatePeacock();
-					}
-
-				}
-			});
-			that.nStartTime = that.nStartTime + that.nPadding;
+		if (that.animCounter < 7) {
+			while (document.getElementById('birds_animation').firstChild) {
+				document.getElementById('birds_animation').removeChild(document.getElementById('birds_animation').firstChild);
+			}
+			document.getElementById('birds_animation').appendChild(that.mApplication.imgArray['anim_image' + that.animCounter]);
 			that.animCounter++;
 		} else {
+			while (document.getElementById('birds_animation').firstChild) {
+				document.getElementById('birds_animation').removeChild(document.getElementById('birds_animation').firstChild);
+			}
 			clearInterval(that.timerObject);
+			that.animatePeacock();
 		}
-		//console.log(" TIER");
-	}, 500);
+		//console.log(" TIER : "+that.animCounter);
+	}, 400);
 
-	/*
-	var bird1 = document.getElementById("bird_1");
-	this.mApplication.jsAnimManager.registerPosition("bird_1");
-	bird1.setPosition(-250, 25);
-	var anim = this.mApplication.jsAnimManager.createAnimObject("bird_1");
-
-	var bird2 = document.getElementById("bird_2");
-	this.mApplication.jsAnimManager.registerPosition("bird_2");
-	bird2.setPosition(-250, 500);
-	var anim2 = this.mApplication.jsAnimManager.createAnimObject("bird_2");
-	anim.add({
-	property : Prop.positionSemicircle(true),
-	to : new Pos(1000, 500),
-	duration : 1500,
-	onComplete : function() {
-	console.log(that);
-	}
-	});
-
-	anim2.add({
-	property : Prop.positionSemicircle(true),
-	to : new Pos(1000, 500),
-	duration : 2000,
-	onComplete : function() {
-	console.log(that);
-	}
-	});
-	*/
 	//var sT = getAssetPath("img","img/images/image3.png")
 	document.getElementById('how_to_play_back_btn_1').onclick = function() {
 		that.mApplication.setGameState(30);
@@ -135,4 +92,4 @@ GameOpeningPage.prototype.setUp = function() {
 		that.mApplication.nextTransition();
 	};
 
-}
+};

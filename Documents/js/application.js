@@ -17,20 +17,20 @@ ApplicationWrapper.prototype.nextTransition = function() {
 			//INTRODUCTION
 			this.mCurrentScreen = new SplashScreen(this)
 			document.getElementById(this.mCurrentScreen.mDivName).style.opacity =0;
-			$('#' + this.mCurrentScreen.mDivName).fadeTo('fast',1);
+			$('#' + this.mCurrentScreen.mDivName).fadeTo('slow',1);
 			break;
 		case 30:
 			this.nGameState = 40;
 			this.mCurrentScreen = new HowToPlayScreen(this)
 			document.getElementById(this.mCurrentScreen.mDivName).style.opacity =0;
-			$('#' + this.mCurrentScreen.mDivName).fadeTo('fast',1);
+			$('#' + this.mCurrentScreen.mDivName).fadeTo('slow',1);
 			break;
 		case 50:
 			//how to play
 			this.nGameState = 51;
 			this.mCurrentScreen = new GameOpeningPage(this)
 			document.getElementById(this.mCurrentScreen.mDivName).style.opacity =0;
-			$('#' + this.mCurrentScreen.mDivName).fadeTo('fast',1);
+			$('#' + this.mCurrentScreen.mDivName).fadeTo('slow',1);
 			break;
 		case 52:
 			this.nGameState = 60;
@@ -41,7 +41,7 @@ ApplicationWrapper.prototype.nextTransition = function() {
 			this.nGameState = 80;
 			this.mCurrentScreen = new GamePlayScreen(this)
 			document.getElementById(this.mCurrentScreen.mDivName).style.opacity =0;
-			$('#' + this.mCurrentScreen.mDivName).fadeTo('fast',1);
+			$('#' + this.mCurrentScreen.mDivName).fadeTo('slow',1);
 			
 			//$('#' + this.mCurrentScreen.mDivName).fadeTo('fast', 1);
 			break;
@@ -55,7 +55,7 @@ ApplicationWrapper.prototype.nextTransition = function() {
 		
 			this.mCurrentScreen = new LevelEndScreen(this)
 		document.getElementById(this.mCurrentScreen.mDivName).style.opacity =0;
-			$('#' + this.mCurrentScreen.mDivName).fadeTo('fast',1);
+			$('#' + this.mCurrentScreen.mDivName).fadeTo('slow',1);
 
 			break;
 		case 120:
@@ -68,7 +68,7 @@ ApplicationWrapper.prototype.nextTransition = function() {
 		
 			this.mCurrentScreen = new WinnerScreen(this)
 		document.getElementById(this.mCurrentScreen.mDivName).style.opacity =0;
-			$('#' + this.mCurrentScreen.mDivName).fadeTo('fast',1);
+			$('#' + this.mCurrentScreen.mDivName).fadeTo('slow',1);
 			break;
 		case 140:
 			this.nQuestionIndex = 0;
