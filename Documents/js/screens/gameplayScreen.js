@@ -194,6 +194,7 @@ function closeQuestionOverlay()
 	{
 		document.getElementById('overlayScreen_ForQuestion').style.display ="none";
 		document.getElementById('opaqueScreen_ForQuestion').style.display ="none";
+		document.getElementById('opaqueScreen_bg_forQuestion').style.block ="none";
 		//DOMWrapper.nextTransition();
 	}
 GamePlayScreen.prototype.showQuestionOverlay = function()
@@ -209,9 +210,16 @@ GamePlayScreen.prototype.showQuestionOverlay = function()
 		
 		document.getElementById('overlayScreen_ForQuestion').style.display ="block";
 		document.getElementById('opaqueScreen_ForQuestion').style.display ="block";
+		document.getElementById('opaqueScreen_ForQuestion').style.zIndex = 9;
+		document.getElementById('opaqueScreen_bg_forQuestion').style.display ="block";
+		document.getElementById('opaqueScreen_bg_forQuestion').style.zIndex = 7;
 		
 		
-		document.getElementById('overlayScreen_ForQuestion').onclick = function()
+		document.getElementById('opaqueScreen_bg_forQuestion').onclick = function()
+		{
+			closeQuestionOverlay();
+		}
+		document.getElementById('clickQuestionTryAgain').onclick = function()
 		{
 			closeQuestionOverlay();
 		}

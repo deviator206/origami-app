@@ -877,3 +877,18 @@ font-size: 32px;
 opacity: 0;
 bottom: 90px;
 }
+
+
+.downloadTheImage{
+	font-weight: bold;
+	color: white!Important;
+	/*border: #0C3 solid 10px;*/
+	bottom: 45px;
+	position: absolute;
+	right: 740px;
+	height: 15px;
+	width: 127px;
+	z-index: 11;
+	cursor: pointer;
+
+}

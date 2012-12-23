@@ -152,6 +152,7 @@ function closeOverlay()
 	{
 		document.getElementById('overlayScreen').style.display ="none";
 		document.getElementById('opaqueScreen').style.display ="none";
+		document.getElementById('download_link').style.display ="none";
 	}
 	function showOverlay()
 	{
@@ -168,9 +169,17 @@ function closeOverlay()
 		document.getElementById('opaqueScreen_bg').style.display ="block";
 		document.getElementById('overlayScreen').style.display ="block";
 		document.getElementById('opaqueScreen').style.display ="block";
+		document.getElementById('download_link').style.display ="block";
+		document.getElementById('download_link').innerHTML ="<u>Download the Image</u>"
 		
+		document.getElementById('download_link').onclick = function()
+		{
+			window.open(getAssetPath("img","images/close-image.png"),"_blank ")
+		}
 		document.getElementById('clickOverlayClose').onclick = function()
 		{
 			closeOverlay();
 		}
+		
+		
 	}
