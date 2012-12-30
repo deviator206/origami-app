@@ -176,7 +176,10 @@ function closeOverlay()
 		{
 			window.open(getAssetPath("img","images/close-image.png"),"_blank ")
 		}
-		document.getElementById('clickOverlayClose').onclick = function()
+		
+		//overlayScreen
+		//clickOverlayClose
+		document.getElementById('opaqueScreen_bg').onclick = function()
 		{
 			closeOverlay();
 		}

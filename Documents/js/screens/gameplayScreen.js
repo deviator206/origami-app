@@ -215,7 +215,7 @@ GamePlayScreen.prototype.showQuestionOverlay = function()
 		document.getElementById('opaqueScreen_bg_forQuestion').style.zIndex = 7;
 		
 		
-		document.getElementById('opaqueScreen_bg_forQuestion').onclick = function()
+		document.getElementById('overlayScreen_ForQuestion').onclick = function()
 		{
 			closeQuestionOverlay();
 		}
