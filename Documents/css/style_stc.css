@@ -883,9 +883,10 @@ bottom: 90px;
 	font-weight: bold;
 	color: white!Important;
 	/*border: #0C3 solid 10px;*/
-	bottom: 45px;
-	position: absolute;
-	left: 790px;
+	bottom: 55px;
+position: absolute;
+left: 762px;
+
 	height: 15px;
 	width: 127px;
 	z-index: 11;
