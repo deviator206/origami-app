@@ -219,10 +219,10 @@ GamePlayScreen.prototype.showQuestionOverlay = function()
 		{
 			closeQuestionOverlay();
 		}
-		document.getElementById('clickQuestionTryAgain').onclick = function()
+		/*document.getElementById('clickQuestionTryAgain').onclick = function()
 		{
 			closeQuestionOverlay();
-		}
+		}*/
 	}
 	
 

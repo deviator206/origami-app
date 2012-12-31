@@ -184,5 +184,9 @@ function closeOverlay()
 			closeOverlay();
 		}
 		
+		document.getElementById('opaqueScreen').onclick = function()
+		{
+			closeOverlay();
+		}
 		
 	}

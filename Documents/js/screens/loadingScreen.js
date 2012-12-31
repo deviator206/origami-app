@@ -165,7 +165,7 @@ LoadingScreen.prototype.splashAssetLoaded = function() {
 	document.getElementById('appContainer').style.display = "block"
 	document.getElementById('loading_script_tags').style.display = "none"
 	document.getElementById('loadingScreen_front').appendChild(this.mApplication.imgArray['loader_1']);
-	//this.mGameAssetLoader.start();
+	this.mGameAssetLoader.start();
 
 }
 
