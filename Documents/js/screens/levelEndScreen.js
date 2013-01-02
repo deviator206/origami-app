@@ -139,10 +139,7 @@ LevelEndScreen.prototype.setUp = function()
 		//that.mApplication.nextTransition();
 	};
 	
-	//document.getElementById('origamiImageCloseButton').onclick = function()
-	//{
-		//document.getElementById('overlayScreen').style.display = "none"
-	//}
+	
 }
 
 
@@ -170,11 +167,20 @@ function closeOverlay()
 		document.getElementById('overlayScreen').style.display ="block";
 		document.getElementById('opaqueScreen').style.display ="block";
 		document.getElementById('download_link').style.display ="block";
+		document.getElementById('clickOverlayClose').innerHTML ="<u>Close X </u>"
 		document.getElementById('download_link').innerHTML ="<u>Download the Image</u>"
 		
 		document.getElementById('download_link').onclick = function()
 		{
-			window.open(getAssetPath("img","images/close-image.png"),"_blank ")
+			var sImageURL = _gMainApplication.imgArray['humming_bird_image'].src //getAssetPath("img","images/close-image.png");
+			var newPath = String(document.location.href)
+			newPath =  newPath.split('/Pages/')[0];
+			//newPath += "/Documents/js/ImageDownload.aspx?imageurl="+sImageURL
+			//newPath += "/Documents/js/Default.aspx"
+			console.log(' ::: '+document.location+"::: newPath>>"+newPath);
+			//window.open("https://primary.acn-edit.accenture.com/Microsites/training/stctraining/Documents/Forms/AllItems.aspx","_blank ");
+			newPath += "/PublishingImages/origami/images/humming_bird.zip"
+			window.open(newPath,"_blank ");
 		}
 		
 		//overlayScreen
@@ -185,6 +191,10 @@ function closeOverlay()
 		}
 		
 		document.getElementById('opaqueScreen').onclick = function()
+		{
+			closeOverlay();
+		}
+		document.getElementById('clickOverlayClose').onclick = function()
 		{
 			closeOverlay();
 		}

@@ -142,6 +142,8 @@ LoadingScreen.prototype.setUp = function() {
 	this.mApplication.imgArray['loader_7'] = this.mGameSplashLoader.addImage(getAssetPath("img", "splash/Loader7.png"));
 	this.mApplication.imgArray['loader_8'] = this.mGameSplashLoader.addImage(getAssetPath("img", "splash/Loader8.png"));
 	this.mApplication.imgArray['loader_9'] = this.mGameSplashLoader.addImage(getAssetPath("img", "splash/Loader9.png"));
+	
+	this.mApplication.imgArray['humming_bird_image'] = this.mGameAssetLoader.addImage(getAssetPath("img", "images/close-image.jpg"));
 
 	var thatObject = this;
 	this.mGameAssetLoader.addProgressListener(function(e) {
