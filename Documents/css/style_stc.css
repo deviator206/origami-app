@@ -723,13 +723,16 @@ cursor: pointer;
 .opaqueScreenCSS_ForQuestion {
 	font-family: verdana,arial,helvetica,sans-serif;
 	color: white;
-	background-color:#9C9999;
+	/*background-color:#9C9999;*/
 	font-size: 34px;
 	width: 420px;
 	height: 103px;
 	position: absolute;
-	top: 170px;
-	left: 236px;
+	/*top: 170px;
+	left: 236px;*/
+	top: 100px;
+	left: 195px;
+
 	display: none;
 	text-align:center;
 	padding-top:78px;
@@ -752,7 +755,11 @@ color: white;
 	
 }
 
-
+#loadingMessage
+{
+	margin-left: 115px;
+	font-size: 25px;
+}
 .endNormal
 {
 	color :#666666;

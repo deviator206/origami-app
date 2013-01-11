@@ -214,6 +214,11 @@ GamePlayScreen.prototype.showQuestionOverlay = function()
 		document.getElementById('opaqueScreen_bg_forQuestion').style.display ="block";
 		document.getElementById('opaqueScreen_bg_forQuestion').style.zIndex = 7;
 		
+		var mObj = _gMainApplication.imgArray['PTA_level'+_gMainApplication.nLevelCounter];
+		//opaqueScreen_ForQuestion
+		document.getElementById('opaqueScreen_ForQuestion').innerHTML ="";
+		document.getElementById('opaqueScreen_ForQuestion').appendChild(mObj);
+		
 		
 		document.getElementById('overlayScreen_ForQuestion').onclick = function()
 		{

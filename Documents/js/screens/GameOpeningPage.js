@@ -65,7 +65,7 @@ GameOpeningPage.prototype.setUp = function() {
 	document.getElementById('main_P').appendChild(this.mApplication.imgArray['images_congratsEnd']);
 
 	this.timerObject = setInterval(function() {
-		if (that.animCounter < 7) {
+		if (that.animCounter < 24) {
 			while (document.getElementById('birds_animation').firstChild) {
 				document.getElementById('birds_animation').removeChild(document.getElementById('birds_animation').firstChild);
 			}
@@ -79,7 +79,7 @@ GameOpeningPage.prototype.setUp = function() {
 			that.animatePeacock();
 		}
 		//console.log(" TIER : "+that.animCounter);
-	}, 400);
+	}, 100);
 
 	//var sT = getAssetPath("img","img/images/image3.png")
 	document.getElementById('how_to_play_back_btn_1').onclick = function() {

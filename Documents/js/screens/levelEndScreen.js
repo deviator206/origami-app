@@ -172,6 +172,7 @@ function closeOverlay()
 		
 		document.getElementById('download_link').onclick = function()
 		{
+			/*
 			var sImageURL = _gMainApplication.imgArray['humming_bird_image'].src //getAssetPath("img","images/close-image.png");
 			var newPath = String(document.location.href)
 			newPath =  newPath.split('/Pages/')[0];
@@ -180,6 +181,10 @@ function closeOverlay()
 			console.log(' ::: '+document.location+"::: newPath>>"+newPath);
 			//window.open("https://primary.acn-edit.accenture.com/Microsites/training/stctraining/Documents/Forms/AllItems.aspx","_blank ");
 			newPath += "/PublishingImages/origami/images/humming_bird.zip"
+			*/
+			var newPath = String(document.location.href)
+			newPath =  newPath.split('/Pages/')[0];
+			newPath += "/PublishingImages/origami/images/humming_bird.jpg"
 			window.open(newPath,"_blank ");
 		}
 		
